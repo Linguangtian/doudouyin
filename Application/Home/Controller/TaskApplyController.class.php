@@ -117,6 +117,10 @@ class TaskApplyController extends HomeBaseController{
     public function handle() {
         if( IS_POST ) {
             $id = I('post.id');
+
+
+
+
             $old_status = M('task_apply')->where(array('id'=>$id))->getField('status');
             if( $old_status == 2 ) {
                 $this->error('审核已通过，不可再修改');
@@ -187,6 +191,8 @@ class TaskApplyController extends HomeBaseController{
     public function batch_set_task_apply_status()
     {
         $ids = I('post.id');
+
+
         if( empty($ids) ) {
             $this->error('请选择要审核的任务');
         }
@@ -213,7 +219,8 @@ class TaskApplyController extends HomeBaseController{
                         }
                     }
 
-                    $this->add_task_price($id);
+                   // $this->add_task_price($id);
+                   $this->add_task_jinbin($id);
                 }
             }
             $this->success('操作成功');
@@ -292,6 +299,87 @@ class TaskApplyController extends HomeBaseController{
         }
     }
 
+
+
+    /**
+     * 任务成功 增加喵币
+     * @param $id
+     */
+    private function add_task_jinbin($id) {
+        $_data = M('task_apply')->where(array('id'=>$id))->find();
+        //$model_member = new MemberModel();
+
+        //任务人收入
+        $this->add_jinbin($_data['member_id'], $_data['jinbin'], 1, 2, '任务收入',$id,0,'' );
+        //$model_member->incPrice($_data['member_id'],$_data['price'],1,'任务收入',$id);
+
+        $member_data = M('member')->field('id,username,level,p1,p2,p3')->where(array('id'=>$_data['member_id']))->find();
+
+        //是否开启等级高低返佣规则
+        $open_level_rule = intval(sp_cfg('open_level_rule'));
+
+        //给直接上级返利
+        if( $member_data['p1']>0 ) {
+            $bfb_1 = floatval(sp_cfg('bfb_1'));
+            if( $bfb_1>0 ) {
+                $price_1 = $_data['jinbin'] * $bfb_1/100;
+                $price_1 = sprintf("%.2f", $price_1);
+                if( $open_level_rule==1 ) {
+                    $p1_level = M('member')->where(array('id'=>$member_data['p1']))->getField('level');
+                    if( $p1_level>=$member_data['level'] ) {
+                        $this->add_jinbin($member_data['p1'], $price_1 , 1, 3,'一级提成，来源用户'.$member_data['username'], $id,$member_data['id'] ,$member_data['username']);
+                    }
+                } else {
+                    $this->add_jinbin($member_data['p1'], $price_1 , 1, 3,'一级提成，来源用户'.$member_data['username'], $id,$member_data['id'] ,$member_data['username']);
+                }
+            }
+        }
+
+        //二级返利
+        if( $member_data['p2']>0 ) {
+            $bfb_2 = floatval(sp_cfg('bfb_2'));
+            if( $bfb_2>0 ) {
+                $price_2 = $_data['jinbin'] * $bfb_2/100;
+                $price_2 = sprintf("%.2f", $price_2);
+                if( $open_level_rule==1 ) {
+                    $p2_level = M('member')->where(array('id'=>$member_data['p2']))->getField('level');
+                    if(  $p2_level>=$member_data['level'] ) {
+                        $this->add_jinbin($member_data['p2'], $price_2 , 1, 3,'二级提成，来源用户'.$member_data['username'], $id,$member_data['id'] ,$member_data['username']);
+                    }
+                } else {
+                    $this->add_jinbin($member_data['p2'], $price_2 , 1, 3,'二级提成，来源用户'.$member_data['username'], $id,$member_data['id'] ,$member_data['username']);
+                }
+            }
+        }
+
+        //三级返利
+        if( $member_data['p3']>0 ) {
+            $p3_level = M('member')->where(array('id'=>$member_data['p3']))->getField('level');
+            $ji_3 = intval(sp_cfg('ji_3'));
+            if( ($ji_3==0) || ($ji_3==2 && $p3_level>=2 ) ) {
+                $bfb_3 = floatval(sp_cfg('bfb_3'));
+                if( $bfb_3>0 ) {
+                    $price_3 = $_data['price'] * $bfb_3/100;
+                    $price_3 = sprintf("%.2f", $price_3);
+                    if( $open_level_rule==1 ) {
+                        if( $p3_level>=$member_data['level']  ) {
+
+                            $this->add_jinbin($member_data['p3'], $price_3 , 1, 3,'三级提成，来源用户'.$member_data['username'], $id,$member_data['id'] ,$member_data['username']);
+
+                        }
+                    } else {
+
+                        $this->add_jinbin($member_data['p3'], $price_3 , 1, 3,'三级提成，来源用户'.$member_data['username'], $id,$member_data['id'] ,$member_data['username']);
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
     private function add_sale($apply_id,$price,$member_id,$type,$remark,$from_member_id=0)
     {
         //添加直销收入记录
@@ -311,4 +399,27 @@ class TaskApplyController extends HomeBaseController{
             throw_exception('添加收益失败');
         }
     }
+
+
+    private function add_jinbin($member_id,$c_jinbin,$type,$c_type,$dsc,$order_id=0,$from_member_id=0,$from_member_name='')
+    {
+        //添加直销收入记录
+        $data['member_id'] = $member_id;
+        $data['from_member_id'] = $from_member_id;
+        $data['order_id'] = $order_id;
+        $data['c_jinbin'] = $c_jinbin;
+        $data['dsc'] = $dsc;
+        $data['create_time'] = data('Y-m-d H:i:s',time());
+        $data['type'] = $type;
+        $data['c_type'] = $c_type;
+        $result = M('member_jinbin_log')->add($data);
+        if( $result ) {
+            //添加金额变动记录
+            $model_member = new MemberModel();
+            $model_member->incJinbin($member_id,$c_jinbin,$c_type);
+        } else {
+
+        }
+    }
+
 }

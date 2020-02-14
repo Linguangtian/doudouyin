@@ -1714,3 +1714,949 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
 
+[ 2020-02-14T23:02:32+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010742s ]
+NOTIC: [8] Undefined index: user E:\github\douyi\Application\Common\Controller\AdminBaseController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='' and g.status='1' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002930s ]
+
+[ 2020-02-14T23:02:34+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:02:38+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005860s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dt_users` WHERE `username` = 'admin' AND `password` = '7fef6171469e80d32c0559f88b377245' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2020-02-14T23:02:38+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0020s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') E:\github\douyi\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003907s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:02:40+08:00 ] 127.0.0.1 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1581523200 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1581004800 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1579017600 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1581523200 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1581004800 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1579017600 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1579017600 and create_time < 1581695999 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002929s ]
+
+[ 2020-02-14T23:02:49+08:00 ] 127.0.0.1 /index.php/Admin/Point/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0049s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_point_level` [ RunTime:0.0156s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_point_level` ORDER BY `point` asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017578s ]
+
+[ 2020-02-14T23:02:51+08:00 ] 127.0.0.1 /index.php/Admin/Point/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `dt_point_set` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `dt_point_set` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.153320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:03:01+08:00 ] 127.0.0.1 /index.php/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: map E:\github\douyi\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 0,30   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=2 or p2=2 or p3=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=1 or p2=1 or p3=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002929s ]
+
+[ 2020-02-14T23:03:07+08:00 ] 127.0.0.1 /index.php/Admin/Pay/point_log/member_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_member_point_log` [ RunTime:0.0293s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_point_log a WHERE a.member_id = '2' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_point_log a left JOIN dt_member as c on a.member_id = c.id  WHERE a.member_id = '2' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003906s ]
+
+[ 2020-02-14T23:12:02+08:00 ] 127.0.0.1 /index.php/Admin/Point/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_point_set` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dt_point_set` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:12:09+08:00 ] 127.0.0.1 /index.php/Admin/Point/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_point_level` [ RunTime:0.0059s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_point_level` ORDER BY `point` asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:12:11+08:00 ] 127.0.0.1 /index.php/Admin/Point/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_point_set` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dt_point_set` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:14:25+08:00 ] 127.0.0.1 /index.php/Admin/Point/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_point_level` [ RunTime:0.0059s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_point_level` ORDER BY `point` asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2020-02-14T23:15:31+08:00 ] 127.0.0.1 /index.php/Admin/Point/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_point_set` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `dt_point_set` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:15:34+08:00 ] 127.0.0.1 /index.php/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: map E:\github\douyi\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 0,30   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=2 or p2=2 or p3=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=1 or p2=1 or p3=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:15:45+08:00 ] 127.0.0.1 /index.php/Admin/Member/chongzhi.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0010s ]
+SQL: UPDATE `dt_member` SET `price`=price+10 WHERE `id` = 2 [ RunTime:0.0293s ]
+SQL: UPDATE `dt_member` SET `total_price`=total_price+10 WHERE `id` = 2 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0010s ]
+SQL: INSERT INTO `dt_member_price_log` (`member_id`,`price`,`remark`,`create_time`,`type`,`no`) VALUES ('2','10','管理员后台充值，管理员ID：88','1581693345','98','') [ RunTime:0.0303s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:15:46+08:00 ] 127.0.0.1 /index.php/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: map E:\github\douyi\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 0,30   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=2 or p2=2 or p3=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=1 or p2=1 or p3=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:15:53+08:00 ] 127.0.0.1 /index.php/Admin/Pay/price_log/member_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_price_log a WHERE a.member_id = '2' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_price_log a left JOIN dt_member as c on a.member_id = c.id  WHERE a.member_id = '2' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_member_price_log a WHERE a.member_id = '2' AND a.type < 10 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 75 行.
+NOTIC: [8] Undefined variable: tixian_status E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067383s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:16:15+08:00 ] 127.0.0.1 /index.php/Admin/Pay/price_log/member_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_price_log a WHERE a.member_id = '2' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_price_log a left JOIN dt_member as c on a.member_id = c.id  WHERE a.member_id = '2' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0020s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_member_price_log a WHERE a.member_id = '2' AND a.type < 10 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 75 行.
+NOTIC: [8] Undefined variable: tixian_status E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:43:10+08:00 ] 127.0.0.1 /index.php/Admin/Pay/price_log/member_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0020s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_price_log a WHERE a.member_id = '2' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_price_log a left JOIN dt_member as c on a.member_id = c.id  WHERE a.member_id = '2' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0020s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_member_price_log a WHERE a.member_id = '2' AND a.type < 10 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 75 行.
+NOTIC: [8] Undefined variable: tixian_status E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2020-02-14T23:44:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') E:\github\douyi\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003906s ]
+
+[ 2020-02-14T23:44:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0059s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1581523200 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1581004800 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1579017600 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1581523200 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1581004800 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1579017600 and create_time < 1581609600 ) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1579017600 and create_time < 1581695999 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:44:21+08:00 ] 127.0.0.1 /index.php/Admin/TaskApply/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_task_apply a LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,b.title,b.level,b.type,c.username,c.phone,c.nickname FROM dt_task_apply a left JOIN dt_task as b on a.task_id = b.id left JOIN dt_member as c on a.member_id = c.id  ORDER BY a.id desc LIMIT 0,100   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 78 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 79 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 91 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 98 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 111 行.
+NOTIC: [8] Undefined index: status E:\github\douyi\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 111 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:44:22+08:00 ] 127.0.0.1 /index.php/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: map E:\github\douyi\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 0,30   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=5 or p2=5 or p3=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=4 or p2=4 or p3=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=3 or p2=3 or p3=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=2 or p2=2 or p3=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=1 or p2=1 or p3=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area E:\github\douyi\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T23:44:32+08:00 ] 127.0.0.1 /index.php/Admin/Pay/price_log/member_id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_price_log a WHERE a.member_id = '5' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_price_log a left JOIN dt_member as c on a.member_id = c.id  WHERE a.member_id = '5' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0029s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_member_price_log a WHERE a.member_id = '5' AND a.type < 10 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 75 行.
+NOTIC: [8] Undefined variable: tixian_status E:\github\douyi\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2020-02-14T23:44:45+08:00 ] 127.0.0.1 /index.php/Admin/Pay/point_log/member_id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','198','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','197','161','165','166','167','147','162','163','179','180','181','191','193','194','195','196','157','158','199','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_member_point_log` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_point_log a WHERE a.member_id = '5' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_point_log a left JOIN dt_member as c on a.member_id = c.id  WHERE a.member_id = '5' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 53 行.
+NOTIC: [8] Undefined index: start_date E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\github\douyi\Runtime\Cache\Admin\e5e577e9c61805c49d21559756586629.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+

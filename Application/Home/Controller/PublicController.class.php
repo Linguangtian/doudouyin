@@ -232,9 +232,9 @@ class PublicController extends PublicBaseController
                 $this->error('请输入短信验证码。');
             }
 
-            if ($code != session('yzmcode')) {
+           /* if ($code != session('yzmcode')) {
                 $this->error('短信验证码不正确。');
-            }
+            }*/
 
 
             if ($nickname == '') {
@@ -329,7 +329,25 @@ class PublicController extends PublicBaseController
                 if (!empty($point_set['reg_point'])) {
                     M('member')->where(['id' => $id])->save(['point' => $point_set['reg_point'], 'jia_point' => $point_set['reg_point']]);
                     M('member_point_log')->add(['member_id' => $id, 'point' => $point_set['reg_point'], 'remark' => '注册赠送信用分', 'create_time' => time(), 'type' => 1]);
+
+
+
                 }
+
+                // xiao5    2020年2月14日17:38:54   注册送喵币
+                $jinbin =  188;
+                M('member')->where(['id' => $id])->save(['jinbin_point' =>$jinbin]);
+                $jinbin_data=[
+                    'member_id' => $id,
+                    'c_jinbin'  =>$jinbin,
+                    'c_type'    =>1,
+                    'type'      =>1,
+                    'create_time'=>date('Y-m-d H:i:s',time()),
+                    'dsc' => '注册赠送'.$jinbin.'币',
+
+                ];
+                M('member_jinbin_log')->add($jinbin_data);
+
 
                 // xiao5    2019年7月8日18:23:26   加推荐关系表
                 if (!empty($invite_code)) {

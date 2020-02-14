@@ -660,6 +660,30 @@ class MemberController extends HomeBaseController{
         $this->display();
     }
 
+
+    public function  jinbin_log(){
+        $member_id = $this->member_id;
+        $map= ['a.member_id'=>$member_id] ;
+        $model = M('member_jinbin_log');
+        $count = $model->alias('a')->where($map)->count();
+        $page = sp_get_page_m($count, 50);//分页
+        $firstRow = $page->firstRow;
+        $listRows = $page->listRows;
+        $list = $model->alias('a')
+            ->join(C('DB_PREFIX').'member as m on a.member_id = m.id','left')
+            ->where($map)
+            ->field('a.*,m.username,m.phone')
+            ->order('a.id desc')->limit("$firstRow , $listRows")
+            ->select();
+        $this->assign("Page", $page->show());
+        $this->assign("list", $list);
+        $this->assign('count', intval($count));
+
+        $this->display();
+
+    }
+
+
     //销售提成记录
     public function sale()
     {

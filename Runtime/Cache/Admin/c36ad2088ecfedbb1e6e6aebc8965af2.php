@@ -101,6 +101,7 @@
         <th>余额</th>
         <th>累计奖励</th>
         <th>信用分</th>
+        <th>金币</th>
         <th>关注时间</th>
         <th>销售团队</th>
         <th>状态</th>
@@ -119,6 +120,7 @@
             <td><?php echo ($vo["price"]); ?>元</td>
             <td><?php echo ($vo["total_price"]); ?>元</td>
             <td><?php echo ($vo["point"]); ?></td>
+            <td><?php echo ($vo["jinbin_point"]); ?></td>
             <td>
                 <?php echo (date("Y-m-d H:s", $vo["create_time"])); ?>
             </td>

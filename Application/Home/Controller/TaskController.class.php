@@ -311,6 +311,7 @@ class TaskController extends HomeBaseController{
 
             $task_id = $apply_data['task_id'];
             $apply_data['task_title'] = M('task')->where(array('id'=>$task_id))->getField('title');
+
             $apply_status = C('APPLY_STATUS');
             $apply_data['apply_status'] = $apply_status[$apply_data['status']];
             $this->assign("apply_data", $apply_data);
@@ -335,7 +336,7 @@ class TaskController extends HomeBaseController{
         $member_level = M('member')->where(array('id'=>$this->get_member_id()))->getField('level');
 		
        
-        $task_data = M('task')->field('level,price,max_num,apply_num,end_time')->where(array('id'=>$id))->find();
+        $task_data = M('task')->field('level,price,max_num,apply_num,end_time,jinbin')->where(array('id'=>$id))->find();
 
         if( $task_data['end_time']<time() ) {
             $this->error('该任务已过期');
@@ -382,6 +383,7 @@ class TaskController extends HomeBaseController{
         $data['task_id'] = $id;
         $data['member_id'] = $member_id;
         $data['price'] = $task_data['price'];
+        $data['jinbin'] = $task_data['jinbin'];
         $data['status'] = 0;
         $data['create_time'] = $time;
         $data['update_time'] = $time;

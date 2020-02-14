@@ -149,6 +149,43 @@ class MemberModel extends BaseModel
         return $res;
     }
 
+
+
+
+
+
+    /**
+     * 更新会员jinbin
+     * @param $member_id
+     * @param $price
+     * @param int $type
+     * @param string $remark
+     * @return bool
+     */
+    public function incJinbin($member_id, $jinbin, $type=0)
+    {
+        if( !($jinbin>0) ) {
+            return false;
+        }
+        $res = M('member')->where(array('id' => $member_id))->setInc('jinbin_point', $jinbin);
+
+        if ($res) {
+
+            //更新总收入 当提现失败返回余额时不加进累计收入
+            if( $type != 99 ) {
+                M('member')->where(array('id' => $member_id))->setInc('total_jinbin', $jinbin);
+            }
+
+        }
+        return $res;
+    }
+
+
+
+
+
+
+
     /**
      * 提现
      * @param $member_id

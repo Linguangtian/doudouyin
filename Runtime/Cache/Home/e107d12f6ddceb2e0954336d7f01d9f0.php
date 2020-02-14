@@ -173,8 +173,8 @@
 				<div class="num">累计收益</div>
 			</div>
 			<span class="u-data-g">|</span>
-			<div class="mesBox">
-				<div class="text">0.00</div>
+			<div class="mesBox" onclick="window.open('/index.php/Home/Member/jinbin_log.html','_self')">
+				<div class="text" ><?php echo ($data["jinbin_point"]); ?></div>
 				<div class="num">喵币余额</div>
 			</div>
 			<span class="u-data-g">|</span>

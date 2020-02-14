@@ -13,7 +13,7 @@ class IndexController extends HomeBaseController{
             $start = $_REQUEST['start'];
             $map = array();
             $map['status'] = 1;
-            $task_list = M('task')->field('id,cid,title,level,price,create_time,max_num,apply_num,max_num-apply_num as leftnum, tasklb')->where($map)->order('id desc')->limit($start,10)->select();
+            $task_list = M('task')->field('jinbin,id,cid,title,level,price,create_time,max_num,apply_num,max_num-apply_num as leftnum, tasklb')->where($map)->order('id desc')->limit($start,10)->select();
             $level_list = LevelModel::get_member_level();
 
             $cate_list = M('Category')->field('*')->where(array('is_show'=>1))->order('order_number')->select();
@@ -79,7 +79,7 @@ class IndexController extends HomeBaseController{
 
         $map = array();
         $map['status'] = 1;
-        $task_list = M('task')->field('id,cid,title,level,price,create_time,max_num,apply_num,max_num-apply_num as leftnum, tasklb')->where($map)->order('id desc')->limit(10)->select();
+        $task_list = M('task')->field('jinbin,id,cid,title,level,price,create_time,max_num,apply_num,max_num-apply_num as leftnum, tasklb')->where($map)->order('id desc')->limit(10)->select();
         $level_list = LevelModel::get_member_level();
         foreach ($task_list as &$item) {
             //level
