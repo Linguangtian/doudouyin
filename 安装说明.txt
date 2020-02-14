@@ -1,0 +1,6 @@
+﻿导入数据库sjk.sql
+修改数据库配置文件db.php
+/Application/Common/Conf
+设置TP伪静态
+后台/index.php/Admin/Public/login.html
+用户名:admin  密码:admin888
