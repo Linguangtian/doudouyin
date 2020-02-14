@@ -1,0 +1,388 @@
+[ 2020-02-14T21:04:28+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+
+[ 2020-02-14T21:04:28+08:00 ] 127.0.0.1 /index.php/Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010742s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010742s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2020-02-14T21:18:12+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+
+[ 2020-02-14T21:18:13+08:00 ] 127.0.0.1 /index.php/Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:18:50+08:00 ] 127.0.0.1 /index.php/Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dt_member` WHERE `username` = '18597609706' AND `password` = 'd7a31ea0e38dc781ad32a5a94d6b48cc' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `last_login_time` FROM `dt_member` WHERE `id` = 2 LIMIT 1581686330   [ RunTime:0.0000s ]
+
+[ 2020-02-14T21:18:56+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `dt_category` WHERE `is_show` = 1 ORDER BY `order_number` LIMIT 10   [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`cid`,`title`,`level`,`price`,`create_time`,`max_num`,`apply_num`,max_num-apply_num as leftnum,`tasklb` FROM `dt_task` WHERE `status` = 1 ORDER BY `id` desc LIMIT 10   [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0020s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_page` [ RunTime:0.0068s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`title`,`update_time`,`content` FROM `dt_page` WHERE `recommend2` = 1 ORDER BY `update_time` asc LIMIT 1   [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `dt_notice` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `dt_notice` WHERE ( ( member_id = 2 and has_view=0 ) ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001954s ]
+NOTIC: [8] Undefined variable: version E:\github\douyi\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php 第 12 行.
+SQL: SHOW COLUMNS FROM `dt_advert` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dt_advert` WHERE `cid` = 1 LIMIT 2   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:20:35+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0020s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`cid`,`title`,`level`,`price`,`create_time`,`max_num`,`apply_num`,max_num-apply_num as leftnum,`tasklb` FROM `dt_task` WHERE `status` = 1 ORDER BY `id` desc LIMIT 10,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dt_category` WHERE `is_show` = 1 ORDER BY `order_number`  [ RunTime:0.0010s ]
+
+[ 2020-02-14T21:20:36+08:00 ] 127.0.0.1 /index.php/Home/Task/show/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\github\douyi\Application\Home\Controller\TaskController.class.php 第 7 行.
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dt_task` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dt_task_apply` WHERE `task_id` = 2 AND `member_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001953s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2020-02-14T21:21:03+08:00 ] 127.0.0.1 /index.php/Home/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\github\douyi\Application\Home\Controller\TaskController.class.php 第 7 行.
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.username FROM dt_member_price_log a left JOIN dt_member as b on a.member_id = b.id  WHERE a.type <= 3 LIMIT 20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_page` [ RunTime:0.0029s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`title`,`create_time` FROM `dt_page` ORDER BY `sort` asc,`id` asc LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:21:05+08:00 ] 127.0.0.1 /index.php/Home/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dt_member` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0029s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_sale_list` [ RunTime:0.0156s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_sale_list` WHERE ( member_id=2 and TO_DAYS(from_unixtime(create_time)) = TO_DAYS(now()) ) LIMIT 1   [ RunTime:0.0527s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_sale_list` WHERE ( member_id=2 and DATE_FORMAT(from_unixtime(create_time),'%Y%m') = DATE_FORMAT(CURDATE(),'%Y%m') ) LIMIT 1   [ RunTime:0.0303s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_sale_list` WHERE ( member_id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE (  (p1=2 or p2=2 or p3=2) and (TO_DAYS(from_unixtime(create_time)) = TO_DAYS(now()))  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE (  (p1=2 or p2=2 or p3=2) and (DATE_FORMAT(from_unixtime(create_time),'%Y%m') = DATE_FORMAT(CURDATE(),'%Y%m')) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=2 or p2=2 or p3=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_notice` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_notice` WHERE ( (( member_id = 2 ) or ( (is_system = 1 and role_type = 0) or ( is_system = 1 and role_type = 1 ) ) ) and create_time > 0  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_point_level` [ RunTime:0.0068s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_point_level` ORDER BY `point` desc LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:21:11+08:00 ] 127.0.0.1 /index.php/Home/Member/sale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: select SUM(price) as total from `dt_sale_list` where `member_id` = 2  and type=1 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_sale_list` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_sale_list a WHERE a.member_id = '2' AND a.type = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,b.username,b.phone FROM dt_sale_list a left JOIN dt_member as b on a.from_member_id = b.id  WHERE a.member_id = '2' AND a.type = 1 ORDER BY a.id desc LIMIT 0,50   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:21:15+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dt_category` WHERE `is_show` = 1 ORDER BY `order_number` LIMIT 10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`cid`,`title`,`level`,`price`,`create_time`,`max_num`,`apply_num`,max_num-apply_num as leftnum,`tasklb` FROM `dt_task` WHERE `status` = 1 ORDER BY `id` desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_page` [ RunTime:0.0020s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`title`,`update_time`,`content` FROM `dt_page` WHERE `recommend2` = 1 ORDER BY `update_time` asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_notice` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `dt_notice` WHERE ( ( member_id = 2 and has_view=0 ) ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] Undefined variable: version E:\github\douyi\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php 第 12 行.
+SQL: SHOW COLUMNS FROM `dt_advert` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dt_advert` WHERE `cid` = 1 LIMIT 2   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:21:16+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0029s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`cid`,`title`,`level`,`price`,`create_time`,`max_num`,`apply_num`,max_num-apply_num as leftnum,`tasklb` FROM `dt_task` WHERE `status` = 1 ORDER BY `id` desc LIMIT 10,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dt_category` WHERE `is_show` = 1 ORDER BY `order_number`  [ RunTime:0.0000s ]
+
+[ 2020-02-14T21:21:20+08:00 ] 127.0.0.1 /index.php/Home/Task/show/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\github\douyi\Application\Home\Controller\TaskController.class.php 第 7 行.
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dt_task` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dt_task_apply` WHERE `task_id` = 2 AND `member_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2020-02-14T21:22:51+08:00 ] 127.0.0.1 /index.php/Home/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') E:\github\douyi\Application\Home\Controller\TaskController.class.php 第 7 行.
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.username FROM dt_member_price_log a left JOIN dt_member as b on a.member_id = b.id  WHERE a.type <= 3 LIMIT 20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_page` [ RunTime:0.0029s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`title`,`create_time` FROM `dt_page` ORDER BY `sort` asc,`id` asc LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2020-02-14T21:22:53+08:00 ] 127.0.0.1 /index.php/Home/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003906s ]
+NOTIC: [8] unserialize(): Error at offset 47 of 475 bytes E:\github\douyi\ThinkPHP\Common\functions.php 第 1298 行.
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dt_member` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dt_sale_list` [ RunTime:0.0020s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_sale_list` WHERE ( member_id=2 and TO_DAYS(from_unixtime(create_time)) = TO_DAYS(now()) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_sale_list` WHERE ( member_id=2 and DATE_FORMAT(from_unixtime(create_time),'%Y%m') = DATE_FORMAT(CURDATE(),'%Y%m') ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_sale_list` WHERE ( member_id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE (  (p1=2 or p2=2 or p3=2) and (TO_DAYS(from_unixtime(create_time)) = TO_DAYS(now()))  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE (  (p1=2 or p2=2 or p3=2) and (DATE_FORMAT(from_unixtime(create_time),'%Y%m') = DATE_FORMAT(CURDATE(),'%Y%m')) ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=2 or p2=2 or p3=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_notice` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_notice` WHERE ( (( member_id = 2 ) or ( (is_system = 1 and role_type = 0) or ( is_system = 1 and role_type = 1 ) ) ) and create_time > 0  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dt_point_level` [ RunTime:0.0059s ]
+NOTIC: [2048] Only variables should be passed by reference E:\github\douyi\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_point_level` ORDER BY `point` desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+

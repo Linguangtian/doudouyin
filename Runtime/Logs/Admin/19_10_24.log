@@ -1,0 +1,1566 @@
+[ 2019-10-24T20:33:45+08:00 ] 10.168.1.132 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+NOTIC: [2] Declaration of Common\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /www/wwwroot/9niu.wang/Application/Common/Model/AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000319s ]
+
+[ 2019-10-24T20:33:45+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0017s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000429s ]
+
+[ 2019-10-24T20:33:47+08:00 ] 10.168.1.132 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0004s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [2] Declaration of Common\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /www/wwwroot/9niu.wang/Application/Common/Model/AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2019-10-24T20:33:47+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0024s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2019-10-24T20:33:54+08:00 ] 10.168.1.132 /index.php/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0007s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/9niu.wang/Application/Common/Controller/AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 0,30   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51510 or p2=51510 or p3=51510 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51509 or p2=51509 or p3=51509 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51508 or p2=51508 or p3=51508 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51507 or p2=51507 or p3=51507 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51506 or p2=51506 or p3=51506 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51505 or p2=51505 or p3=51505 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51504 or p2=51504 or p3=51504 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51503 or p2=51503 or p3=51503 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51502 or p2=51502 or p3=51502 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51501 or p2=51501 or p3=51501 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51500 or p2=51500 or p3=51500 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51499 or p2=51499 or p3=51499 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51421 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51498 or p2=51498 or p3=51498 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51423 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51497 or p2=51497 or p3=51497 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51424 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51496 or p2=51496 or p3=51496 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51421 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51495 or p2=51495 or p3=51495 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51421 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51494 or p2=51494 or p3=51494 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51421 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51493 or p2=51493 or p3=51493 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51388 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51492 or p2=51492 or p3=51492 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51425 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51491 or p2=51491 or p3=51491 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51424 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51490 or p2=51490 or p3=51490 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51424 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51489 or p2=51489 or p3=51489 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51425 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51488 or p2=51488 or p3=51488 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51421 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51487 or p2=51487 or p3=51487 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51398 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51486 or p2=51486 or p3=51486 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51422 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51485 or p2=51485 or p3=51485 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51398 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51484 or p2=51484 or p3=51484 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51423 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51483 or p2=51483 or p3=51483 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51425 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51482 or p2=51482 or p3=51482 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51425 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51481 or p2=51481 or p3=51481 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51425 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000306s ]
+
+[ 2019-10-24T20:33:56+08:00 ] 10.168.1.132 /index.php/Admin/Member/index/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0014s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0005s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/9niu.wang/Application/Common/Controller/AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 120,30   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51390 or p2=51390 or p3=51390 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51389 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51389 or p2=51389 or p3=51389 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51388 or p2=51388 or p3=51388 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51387 or p2=51387 or p3=51387 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
+[ 2019-10-24T20:34:08+08:00 ] 10.168.1.132 /index.php/Admin/Member/handle/id/51390/role/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `dt_member` WHERE `id` = 51390 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0009s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2019-10-24T20:34:13+08:00 ] 10.168.1.132 /index.php/Admin/Member/handle/id/51390/role/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0013s ]
+SQL: UPDATE `dt_member` SET `role`='0',`nickname`='15000000000',`phone`='',`sex`='0',`address`='',`password`='d7a31ea0e38dc781ad32a5a94d6b48cc',`level`='3',`user_status`='1',`remark`='' WHERE `id` = 51390 [ RunTime:0.0004s ]
+
+[ 2019-10-24T20:34:13+08:00 ] 10.168.1.132 /index.php/Admin/Member/index/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0004s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/9niu.wang/Application/Common/Controller/AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 120,30   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51390 or p2=51390 or p3=51390 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 51389 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51389 or p2=51389 or p3=51389 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51388 or p2=51388 or p3=51388 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=51387 or p2=51387 or p3=51387 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `username` FROM `dt_member` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area /www/wwwroot/9niu.wang/Runtime/Cache/Admin/c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2019-10-24T20:34:33+08:00 ] 10.168.1.132 /index.php/Admin/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0005s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/9niu.wang/Application/Common/Controller/AdminBaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_task` ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined index: type /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 54 行.
+NOTIC: [8] Undefined index: type /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 54 行.
+NOTIC: [8] Undefined index: type /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 54 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: start_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 68 行.
+NOTIC: [8] Undefined index: end_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2019-10-24T20:34:36+08:00 ] 10.168.1.132 /index.php/Admin/Task/delete/id/363.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0009s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0010s ]
+SQL: DELETE FROM `dt_task` WHERE `id` = 363 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000309s ]
+
+[ 2019-10-24T20:34:37+08:00 ] 10.168.1.132 /index.php/Admin/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0004s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/9niu.wang/Application/Common/Controller/AdminBaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Only variables should be passed by reference /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Db/Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_task` ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined index: type /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 54 行.
+NOTIC: [8] Undefined index: type /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 54 行.
+NOTIC: [8] Undefined index: type /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 54 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: level /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 62 行.
+NOTIC: [8] Undefined index: start_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 68 行.
+NOTIC: [8] Undefined index: end_date /www/wwwroot/9niu.wang/Runtime/Cache/Admin/50e054dd6e9446b43f58e54b1cb79bed.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2019-10-24T20:34:42+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000303s ]
+
+[ 2019-10-24T20:34:45+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000270s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0004s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000307s ]
+
+[ 2019-10-24T20:34:52+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+NOTIC: [2] Illegal offset type in isset or empty /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Model.class.php 第 550 行.
+SQL: DELETE FROM `dt_auth_group_access` WHERE `uid` = 88 [ RunTime:0.0003s ]
+SQL: INSERT INTO `dt_auth_group_access` (`uid`,`group_id`) VALUES ('88','1') [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0005s ]
+SQL: UPDATE `dt_users` SET `id`='88',`username`='admin',`password`='46517e7d184d78fcbf3dc4ce76bb8f08',`status`='1' WHERE (  `id` = '88' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000054s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000273s ]
+
+[ 2019-10-24T20:34:53+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000316s ]
+
+[ 2019-10-24T20:34:55+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000252s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000264s ]
+
+[ 2019-10-24T20:35:02+08:00 ] 10.168.1.132 /index.php/Admin/Rule/add_admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0004s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2019-10-24T20:36:28+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2019-10-24T20:36:29+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2019-10-24T20:37:21+08:00 ] 10.168.1.132 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [2] Declaration of Common\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /www/wwwroot/9niu.wang/Application/Common/Model/AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2019-10-24T20:37:21+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2019-10-24T20:37:36+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2019-10-24T20:37:40+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000263s ]
+
+[ 2019-10-24T20:38:19+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000297s ]
+
+[ 2019-10-24T20:38:22+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0012s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2019-10-24T20:38:54+08:00 ] 10.168.1.132 /index.php/Admin/SystemConfig/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined index: open_wx_login /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 85 行.
+NOTIC: [8] Undefined index: app_android /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 126 行.
+NOTIC: [8] Undefined index: app_android_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 134 行.
+NOTIC: [8] Undefined index: app_ios /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 142 行.
+NOTIC: [8] Undefined index: app_ios_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 150 行.
+NOTIC: [8] Undefined index: vip_msg /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 158 行.
+NOTIC: [8] Undefined index: wxpay_99 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 166 行.
+NOTIC: [8] Undefined index: wxpay_999 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 174 行.
+NOTIC: [8] Undefined index: share_logo /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 182 行.
+NOTIC: [8] Undefined index: qrcode /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 190 行.
+NOTIC: [8] Undefined index: open_level_rule /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000265s ]
+
+[ 2019-10-24T20:39:02+08:00 ] 10.168.1.132 /index.php/Admin/SystemConfig/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: zx_bfb_1 /www/wwwroot/9niu.wang/Application/Admin/Controller/SystemConfigController.class.php 第 17 行.
+NOTIC: [8] Undefined index: zx_bfb_2 /www/wwwroot/9niu.wang/Application/Admin/Controller/SystemConfigController.class.php 第 18 行.
+NOTIC: [8] Undefined index: fx_bfb /www/wwwroot/9niu.wang/Application/Admin/Controller/SystemConfigController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000241s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000253s ]
+
+[ 2019-10-24T20:39:03+08:00 ] 10.168.1.132 /index.php/Admin/SystemConfig/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0004s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: open_wx_login /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 85 行.
+NOTIC: [8] Undefined index: app_android /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 126 行.
+NOTIC: [8] Undefined index: app_android_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 134 行.
+NOTIC: [8] Undefined index: app_ios /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 142 行.
+NOTIC: [8] Undefined index: app_ios_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 150 行.
+NOTIC: [8] Undefined index: vip_msg /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 158 行.
+NOTIC: [8] Undefined index: wxpay_99 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 166 行.
+NOTIC: [8] Undefined index: wxpay_999 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 174 行.
+NOTIC: [8] Undefined index: share_logo /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 182 行.
+NOTIC: [8] Undefined index: qrcode /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 190 行.
+NOTIC: [8] Undefined index: open_level_rule /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000276s ]
+
+[ 2019-10-24T20:39:05+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000279s ]
+
+[ 2019-10-24T20:39:44+08:00 ] 10.168.1.132 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [2] Declaration of Common\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /www/wwwroot/9niu.wang/Application/Common/Model/AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2019-10-24T20:39:44+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001591s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0006s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2019-10-24T20:40:20+08:00 ] 10.168.1.132 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+NOTIC: [2] Declaration of Common\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /www/wwwroot/9niu.wang/Application/Common/Model/AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002791s ]
+
+[ 2019-10-24T20:40:20+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0007s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008583s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2019-10-24T20:41:59+08:00 ] 10.168.1.132 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [2] Declaration of Common\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') /www/wwwroot/9niu.wang/Application/Common/Model/AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000333s ]
+
+[ 2019-10-24T20:41:59+08:00 ] 10.168.1.132 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0009s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571760000 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1571241600 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1569254400 and create_time < 1571846400 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1569254400 and create_time < 1571932799 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2019-10-24T20:42:13+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004233s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000274s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000288s ]
+
+[ 2019-10-24T20:42:14+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000307s ]
+
+[ 2019-10-24T20:42:24+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000234s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+NOTIC: [2] Illegal offset type in isset or empty /www/wwwroot/9niu.wang/ThinkPHP/Library/Think/Model.class.php 第 550 行.
+SQL: DELETE FROM `dt_auth_group_access` WHERE `uid` = 88 [ RunTime:0.0003s ]
+SQL: INSERT INTO `dt_auth_group_access` (`uid`,`group_id`) VALUES ('88','1') [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0005s ]
+SQL: UPDATE `dt_users` SET `id`='88',`username`='admin',`password`='46517e7d184d78fcbf3dc4ce76bb8f08',`status`='1' WHERE (  `id` = '88' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2019-10-24T20:42:25+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2019-10-24T20:42:32+08:00 ] 10.168.1.132 /index.php/Admin/SystemConfig/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: open_wx_login /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 85 行.
+NOTIC: [8] Undefined index: app_android /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 126 行.
+NOTIC: [8] Undefined index: app_android_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 134 行.
+NOTIC: [8] Undefined index: app_ios /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 142 行.
+NOTIC: [8] Undefined index: app_ios_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 150 行.
+NOTIC: [8] Undefined index: vip_msg /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 158 行.
+NOTIC: [8] Undefined index: wxpay_99 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 166 行.
+NOTIC: [8] Undefined index: wxpay_999 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 174 行.
+NOTIC: [8] Undefined index: share_logo /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 182 行.
+NOTIC: [8] Undefined index: qrcode /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 190 行.
+NOTIC: [8] Undefined index: open_level_rule /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2019-10-24T20:42:40+08:00 ] 10.168.1.132 /index.php/Admin/SystemConfig/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000237s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: zx_bfb_1 /www/wwwroot/9niu.wang/Application/Admin/Controller/SystemConfigController.class.php 第 17 行.
+NOTIC: [8] Undefined index: zx_bfb_2 /www/wwwroot/9niu.wang/Application/Admin/Controller/SystemConfigController.class.php 第 18 行.
+NOTIC: [8] Undefined index: fx_bfb /www/wwwroot/9niu.wang/Application/Admin/Controller/SystemConfigController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2019-10-24T20:42:41+08:00 ] 10.168.1.132 /index.php/Admin/SystemConfig/set.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined index: open_wx_login /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 85 行.
+NOTIC: [8] Undefined index: app_android /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 126 行.
+NOTIC: [8] Undefined index: app_android_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 134 行.
+NOTIC: [8] Undefined index: app_ios /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 142 行.
+NOTIC: [8] Undefined index: app_ios_version /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 150 行.
+NOTIC: [8] Undefined index: vip_msg /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 158 行.
+NOTIC: [8] Undefined index: wxpay_99 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 166 行.
+NOTIC: [8] Undefined index: wxpay_999 /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 174 行.
+NOTIC: [8] Undefined index: share_logo /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 182 行.
+NOTIC: [8] Undefined index: qrcode /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 190 行.
+NOTIC: [8] Undefined index: open_level_rule /www/wwwroot/9niu.wang/Runtime/Cache/Admin/dcf868a33d599a00a8c4c4676854e874.php 第 206 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004293s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000258s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000273s ]
+
+[ 2019-10-24T20:43:11+08:00 ] 10.168.1.132 /index.php/Admin/Rule/admin_user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0010s ]
+SQL: SELECT u.id,u.username,u.email,aga.group_id,ag.title FROM dt_auth_group_access aga RIGHT JOIN dt_users u ON aga.uid=u.id LEFT JOIN dt_auth_group ag ON aga.group_id=ag.id   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000255s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000267s ]
+
+[ 2019-10-24T20:43:12+08:00 ] 10.168.1.132 /index.php/Admin/Rule/edit_admin/id/88.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','187','188','189','190','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','192','161','165','166','167','147','162','163','179','180','181','191','157','158','168','169','171','172','173','174','175','176','177','178') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_users` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0004s ]
+SQL: SELECT `group_id` FROM `dt_auth_group_access` WHERE `uid` = 88  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `dt_auth_group`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000333s ]
+
