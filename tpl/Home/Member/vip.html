@@ -1,0 +1,106 @@
+{~$title = "购买会员"}
+
+<include file="Public:header"/>
+
+
+
+<body style="background-color:#ffffff;">
+
+<!-- 头部部分 开始 -->
+<header class="top_header">
+    <div class="left"><a href="{:U('index')}" class="return"></a></div>
+    <div class="title">开通会员</div>
+</header>
+
+<section class="grade-main mt">
+    <form id="form1" class="" data-callback="1" name="form1" method="post" action="{:U('vip')}" >
+        <input type="hidden" name="price" id="price" value="" />
+        <input type="hidden" name="level" id="level" value="" />
+        
+
+        <div class="btm">
+            <!--<div class="tit">
+                <span class="long01"></span>
+                <p>升级会员</p>
+                <span class="long02"></span>
+            </div>-->
+
+            <div class="list" id="vip_sel">
+                <volist name="member_level" id="vo">
+                    <div class="sub <if condition="$vo['level'] gt $member['level']">lv</if>" data-id="{$vo.level}" data-price="{$vo.price}" style="margin-bottom:20px">
+                        <p class="img"><img src="__PUBLIC_IMAGES__/medal_icon_{$vo.level}.png"  /></p>
+                        <p class="">{$vo.name}</p>
+                        <span>￥{$vo.price}</span>
+                    </div>
+                </volist>
+            </div>
+
+        <div class="dx_line"><span>选择支付方式</span></div>
+
+            <div class="recharge_box" style="margin-top: 0;border-top: 0; padding-bottom: 40px;">
+                <input type="hidden" name="payment_type" id="payment_type" value="">
+                <!--<p>选择支付方式：</p>-->
+                <label data-key="alipay">
+                    <i class="alipay"></i> 支付宝支付 <span></span>
+                  
+                </label>
+               <label data-key="wxpay">
+               
+                  <i class="wxpay"></i>微信支付<span></span>
+                </label>
+            </div>
+
+        </div>
+
+        <button type="submit" id="submit" >立即缴纳<span id="show_price_1"></span></button>
+    </form>
+</section>
+
+</body>
+
+</html>
+
+
+
+<script>
+    $(document).ready(function(){
+        $('.recharge_box label').click(function(){
+            $('.recharge_box label span').removeClass('active');
+            $(this).find('span').addClass('active');
+            var payment_type = $(this).attr('data-key');
+            $('#payment_type').val(payment_type);
+        });
+
+        $('#vip_sel .sub.lv').click(function(){
+            var price = $(this).attr('data-price');
+            var level = $(this).attr('data-id');
+            $(this).addClass('active').siblings().removeClass('active');
+            $('#show_price_1').html("（￥" +price+"）");
+            $('#price').val(price);
+            $('#level').val(level);
+        });
+
+        $('#submit').click(function(){
+            var payment_type = $('#payment_type').val();
+            var level = $('#level').val();
+
+            if( level == '' ) {
+                sp_tip('请选择要升级的级别.');
+                return false;
+            }
+            if( payment_type == '' ) {
+                sp_tip('请选择支付渠道.');
+                return false;
+            }
+        })
+        $('#form1').submit();
+    });
+
+    function submit_callback(data){
+        if( data.status == 1 ) {
+            window.location.href = data.url;
+        } else {
+            sp_tip(data.info);
+        }
+    }
+</script>

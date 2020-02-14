@@ -1,0 +1,35 @@
+{~$title = $show['title']}
+<include file="Public:header"/>
+
+<body>
+<div class="body_main">
+    <!-- 头部部分 开始 -->
+    <header class="top_header">
+        <div class="left"><a href="javascript:" class="return go-back"></a></div>
+        <div class="title">{$title}</div>
+    </header>
+    <!--主体部分 开始-->
+    <div class="page_main tline mt">
+        <!--头部部分 开始-->
+        <div class="tit">
+            <h2>{$show.title}</h2>
+            <p>最近更新：{$show.update_time|date='Y-m-d H:i',###}</p>
+        </div>
+        <div style="padding: 20px;">
+            <?php
+                if(!empty($show['thumb'])){
+                $img = $show['thumb'];
+                    echo "<img src= $img width='100%'>";
+                }
+            ?>
+        </div>
+        <div class="txt">
+            {$show.content}
+        </div>
+    </div>
+</div>
+
+<!-- 底部联系部分 开始 -->
+<include file="Public:footer" />
+</body>
+</html>

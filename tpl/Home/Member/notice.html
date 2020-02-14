@@ -1,0 +1,105 @@
+{~$title = "系统消息"}
+<include file="Public:header"/>
+<style>
+    .team_tab li{width:33.3%}
+
+    .sytemNotice .notice .item{
+        background: #fff;
+        margin:3vw 3vw 0;
+        border-radius: 1vw;
+        justify-content:flex-start;
+        position: relative;
+    }
+    .sytemNotice .notice .item img.avatar{
+        width: 10vw;
+        height: 10vw;
+        margin:2vw;
+        float: left;
+    }
+    .sytemNotice .notice .item .info{
+        float: left;
+        height: 10vw;
+        margin: 2vw;
+        width: 70vw;;
+    }
+    .sytemNotice .notice .item .info .time{
+        font-size: 3vw;
+        color: #666
+    }
+    .sytemNotice .notice .item.ash{
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        color: #999;
+    }
+    .sytemNotice .weui-badge_dot{
+        position: absolute;
+        right: 2vw;
+        top: 2vw;
+        padding: 0.3em;
+    }
+    .sytemNotice .body{
+        margin:3vw;
+        padding: 2vw;
+        background: #fff;
+    }
+</style>
+<body class="gray_bg sytemNotice">
+
+<div id="body" style="background: #f8f8fa">
+    <!-- 头部部分 开始 -->
+    <header class="top_header">
+        <div class="left"><a href="javascript:" data-url="{:U('index')}" class="return go-back"></a></div>
+        <div class="title">{$title}</div>
+    </header>
+    <div style="margin-top: 40px"></div>
+
+    <div class="team_tab">
+        <ul>
+            <li class="{$type==1?'current':''}"><a href="{:U('Member/notice',array('type'=>1))}">系统通知</a></li>
+            <li class="{$type==2?'current':''}"><a href="{:U('Member/notice',array('type'=>2))}">新闻资讯</a></li>
+            <li class="{$type==3?'current':''}"><a href="{:U('Member/notice',array('type'=>3))}">帮助中心</a></li>
+        </ul>
+    </div>
+
+    <!--主体部分 开始-->
+    <div class="notice">
+        <if condition="!empty($list)">
+
+                <volist name="list" id="vo">
+                    <?php
+                        $img = isset($vo['thumb']) ? $vo['thumb']:'/Upload/SystemConfig/5d25a71bb963e.png';
+                        $url = U('News/show',array('id'=>$vo['id']));
+                        $url2 = U('Page/show',array('id'=>$vo['id']));
+                        $vo['type'] == 'news' ? $c = 'onclick=goto("'.$url.'")': $c='';
+                        $vo['type'] == 'page' ? $c2 = 'onclick=goto("'.$url2.'")': $c2='';
+                    ?>
+                    <div {$vo['type'] == 'news'? $c : $c2} class="item wrap-flex-row goto {$vo['view_style']?'ash':''}" url="/index.php/Home/Page/show/id/28.html">
+                        <img src="{$img}" class="avatar">
+                        <div class="info">
+                            <div class="title">
+                                {$vo.msg} {$vo.view_style}
+                            </div>
+                            <div class="time">{$vo.create_time|date='Y-m-d',###}</div>
+                        </div>
+                        <div style="clear: both"></div>
+                    </div>
+                </volist>
+            <else/>
+            <div class="none">
+                <div class="none_box">
+                    <img src="__PUBLIC_IMAGES__/none.png" alt="">
+                    <span>暂无信息</span>
+                </div>
+            </div>
+        </if>
+
+    </div>
+</div>
+<script>
+    function goto(url) {
+        window.location.href = url;
+    }
+</script>
+</body>
+<include file="Public:footer"/>
+</html>

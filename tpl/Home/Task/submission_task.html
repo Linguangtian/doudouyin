@@ -1,0 +1,150 @@
+{~$title = "任务记录"}
+
+<include file="Public:header"/>
+
+<script src="__PUBLIC_JS__/countdown.js"></script>
+
+<body class="gray_bg" style="background:#f8f8f8">
+
+<!-- 头部部分 开始 -->
+
+  <!-- 头部部分 开始 -->
+
+    <header class="top_header">
+
+        <div class="left"><a href="javascript:" data-url="{:U('index')}" class="return go-back"></a></div>
+
+        <div class="title">{$title}</div>
+
+    </header>
+<div style="height:55px"></div>
+<div class="task_box mt " style="margin-top: -0px;">
+
+    <div class="con">
+
+        <if condition="!empty($list)">
+
+            <ul>
+
+                <volist name="list" id="vo">
+
+                    <li>
+
+                        <a href="{:U('submission_task_do',array('id'=>$vo['id']))}" class="link">
+
+                            <p class="clear">
+                            
+                                <span class="t">{$vo.title}</span>
+                             
+                                <span class="zhuangtai">进行中</span>
+                            </p>
+                            
+                            <div class="djsbox clear">
+                                <span class="djsspan">任务倒计时：</span>
+                                <div class="container timeBar ys3" data="{$vo.cha_time}" ></div>
+                            </div>
+
+                            </a>
+                            <if condition="$vo['status'] eq 0">
+
+                                <span class="lq chakan" data-id="{$vo.id}">放弃任务</span>
+
+                            </if>
+
+                            <if condition="$vo['status'] eq -1">
+
+                                <span class="lq">审核失败</span>
+
+                            </if>
+
+                    </li>
+
+                </volist>
+
+            </ul>
+
+        <else/>
+
+            <div class="none">
+
+                <div class="none_box">
+
+                    <img src="__PUBLIC_IMAGES__/none.png" alt="">
+
+                    <span>您并没有待完成的任务</span>
+
+                </div>
+
+            </div>
+
+        </if>
+
+    </div>
+
+</div>
+
+ <div class="bg" data-id="">
+     <div class="box">
+         <div class="xxkkuang">
+             <h2>提示</h2>
+             <p>是否放弃该任务？</p>
+         </div>
+         <div class="anniu">
+             <button class="queding">确定</button>
+             <button class="quxiao">取消</button>
+         </div>
+     </div>
+ </div>
+<script type="text/javascript">
+	$(function(){
+		$(".timeBar").each(function () {
+			$(this).countdownsync({
+				dayTag: "",
+				hourTag: "<label class='tt hh dib vam'>00</label><span>时</span>",
+				minTag: "<label class='tt mm dib vam'>00</label><span>分</span>",
+				secTag: "<label class='tt ss dib vam'>00</label><span>秒</span>",
+				dayClass: ".dd",
+				hourClass: ".hh",
+				minClass: ".mm",
+				secClass: ".ss",
+				isDefault: false,
+				showTemp:1
+
+			}, function () {
+				location.reload();
+			});
+		});
+	});
+	
+</script>
+
+<script>
+   $(".chakan").click(function(){
+       var id = $(this).attr('data-id');
+       $('.bg').attr('data-id', id);
+	   $(".bg").show();
+   })
+
+   $('.queding').click(function () {
+       var id = $('.bg').attr('data-id');
+       $.post("{:U('abandon')}", {id: id}, function (result) {
+           if (result.status == 1) {
+               window.location.reload();
+           } else {
+               layer.msg('操作失败');
+           }
+       });
+       $(".bg").hide();
+   })
+
+   $('.quxiao').click(function () {
+       $(".bg").hide();
+   })
+	
+</script>
+
+<include file="Public:footer"/>
+
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content=""/>
+
+    <!--JQ-->
+    <script type="text/javascript" src="__PUBLIC_JS__/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC_JS__/jquery-form.js"></script>
+    <script type="text/javascript" src="__PUBLIC_JS__/layer_mobile2/layer.js?{$version}"></script>
+    <script type="text/javascript" src="__PUBLIC_JS__/swiper.3.1.7.min.js"></script>
+
+    <script src="__PUBLIC_JS__/jquery.simplesidebar.js"></script>
+    <script src="__PUBLIC_JS__/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="__PUBLIC_JS__/TouchSlide.1.0.js"></script>
+
+    <script type="text/javascript" src="__PUBLIC_JS__/func.js"></script>
+
+    <link rel="stylesheet" href="__PUBLIC_CSS__/share.css?3"/>
+    <link rel="stylesheet" href="__PUBLIC_CSS__/font.css?3"/>
+
+    <style>
+        .index_xslb_a {background: url(/Public/statics/images/dp.png) 0 0 no-repeat; background-size: 100% 100%;}
+        .index_xslb_b {background: url(/Public/statics/images/kp.png) 0 0 no-repeat; background-size: 100% 100%;}
+        .index_xslb_c {background: url(/Public/statics/images/2.xhs.png) 0 0 no-repeat; background-size: 100% 100%;}
+        .index_xslb_d {background: url(/Public/statics/images/2.hs.png) 0 0 no-repeat; background-size: 100% 100%;}
+        .index_xslb_e {background: url(/Public/statics/images/2.tt.png) 0 0 no-repeat; background-size: 100% 100%;}
+		.lamp[data-v-4444cd4b] {
+				position: fixed;
+				z-index: 999;
+				left: 50%;
+				top: 0;
+				transform: translate(-50%);
+				width: 100%;
+				height: 32px;
+				background: #2e2e2e;
+				color: #9b9b9b
+			}
+
+		.lamp-img[data-v-4444cd4b] {
+			width: 24px;
+			height: auto;
+			margin: 5px 15px
+		}
+
+		.move-warp[data-v-4444cd4b] {
+			display: inline-block;
+			white-space: nowrap;
+			height: 100%;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			position: relative;
+			overflow: hidden
+		}
+
+		.move[data-v-4444cd4b] {
+			width: 100%;
+			height: auto
+		}
+
+		.move-start[data-v-4444cd4b] {
+			animation: message-data-v-4444cd4b 22s linear infinite
+		}
+
+		.move-item[data-v-4444cd4b] {
+			height: 32px;
+			color: #9b9b9b;
+			font-size: 13px;
+			line-height: 32px;
+		}
+
+		.orange[data-v-4444cd4b] {
+			color: #fff
+		}
+
+		.org[data-v-4444cd4b] {
+			color: #ff9917
+		}
+
+		@keyframes message-data-v-4444cd4b {
+			0%,to {
+				transform: translateZ(0)
+			}
+
+			2%,10%,18.5% {
+				transform: translate3d(0,-10%,0)
+			}
+
+			20%,28.5% {
+				transform: translate3d(0,-20%,0)
+			}
+
+			30%,38.5% {
+				transform: translate3d(0,-30%,0)
+			}
+
+			40%,48.5% {
+				transform: translate3d(0,-40%,0)
+			}
+
+			50%,58.5% {
+				transform: translate3d(0,-50%,0)
+			}
+
+			60%,68.5% {
+				transform: translate3d(0,-60%,0)
+			}
+
+			70%,78.5% {
+				transform: translate3d(0,-70%,0)
+			}
+
+			80%,88.5% {
+				transform: translate3d(0,-80%,0)
+			}
+
+			90%,99.9999% {
+				transform: translate3d(0,-90%,0)
+			}
+		}
+		
+    </style>
+</head>
+<body class="gray_bg" style="background:#fff;">
+<div id="body">
+    <div class="body_main" style="margin-top:-34px;">
+		<div data-v-4444cd4b="" class="lamp flex js">
+	<img data-v-4444cd4b="" src="/tpl/Public/css/images/txgg.png" class="lamp-img">
+	<div data-v-4444cd4b="" class="move-warp">
+		<div data-v-4444cd4b="" class="move move-start">
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">彭正芳</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">20.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">李明</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">20.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">于秀文</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">60.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">刘燕</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">50.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">方涛</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">30.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">陈芳</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">20.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">陈秀清</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">10.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span><span data-v-4444cd4b="" class="org">张怀秀</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span><span data-v-4444cd4b="" class="org">50.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">罗玉群</span>
+				<span data-v-4444cd4b="">完成悬赏提现成功</span><span data-v-4444cd4b="" class="org">200.00元</span>
+			</div>
+			<div data-v-4444cd4b="" class="move-item ell">
+				<span data-v-4444cd4b="">用户</span>
+				<span data-v-4444cd4b="" class="org">李晨</span><span data-v-4444cd4b="">完成悬赏提现成功</span>
+				<span data-v-4444cd4b="" class="org">50.00元</span>
+			</div>
+			<!---->
+		</div>
+	</div>
+</div>
+
+        <!--banner部分 开始-->
+	
+        <!--banner部分 开始-->
+        <div class="index_lb">
+        
+		<volist name=":sp_get_advert(1, 1)" id="vo">
+            <a href="{$vo.url}">
+        	<img src="{$vo.thumb|sp_img}"/>
+            </a>
+			</volist>
+         
+        </div>
+        
+        <div class="index_xslb">
+        	<a href="{:U('Task/lists_lb',array('lb'=>2))}" class="index_xslb_a"></a>
+        	<a href="{:U('Task/lists_lb',array('lb'=>1))}" class="index_xslb_b"></a>
+            <a href="{:U('Task/lists_lb',array('lb'=>3))}" class="index_xslb_c"></a>
+            <a href="{:U('Task/lists_lb',array('lb'=>4))}" class="index_xslb_d"></a>
+            <a href="{:U('Task/lists_lb',array('lb'=>5))}" class="index_xslb_e"></a>
+        </div>
+        
+        
+        <div class="index_rwlb">
+        	<p class="index_tjrw">推荐任务</p>
+        	
+        	
+        	  <volist name="task_list" id="vo">
+        	  	
+        	  	<a href="{:U('Task/show',array('id'=>$vo['id']))}">
+        	  	<div class="index_rwxq">
+        		<img src="{$sys_config.web_logo}"/>
+
+        		<div class="index_wzns">
+        			<p class="index_title">{$vo.title}</p>
+                  <p class="index_ffl"> <span><if condition="$vo.tasklb eq '1'">快手关注<else/>抖音关注</if></span> <span class="index_gjrw">
+                    
+                     <volist name="level" id="vv">
+                
+                       			<if condition="$vv['level'] eq $vo['level']">{$vv.name}</if>
+                          </volist>
+                    
+                       </span> </p>
+        			<p class="index_syrw">剩余数量：<span>{$vo.leftnum}</span></p>
+        		</div>
+        		
+        		<p class="index_qqq">
+        			{$vo.price}元
+        			<span></span>
+        		</p>
+        		
+        	</div>
+        	</a>
+        	  	
+        	  	</volist>
+
+        </div>
+
+    <!-- 底部联系部分 开始 -->
+    <include file="Public:footer" />
+</div>
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        //幻灯片
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 4000,
+            autoplayDisableOnInteraction: false
+        });
+    });
+</script>
+<if condition="!empty($page_notice_list)">
+<script>
+    //文字向上滚动
+    (function($){
+        $.fn.FontScroll = function(options){
+            var d = {time: 3000,s: 'fontColor',num: 1}
+            var o = $.extend(d,options);
+
+            this.children('ul').addClass('line');
+            var _con = $('.line').eq(0);
+            var _conH = _con.height(); //滚动总高度
+            var _conChildH = _con.children().eq(0).height();//一次滚动高度
+            var _temp = _conChildH;  //临时变量
+            var _time = d.time;  //滚动间隔
+            var _s = d.s;  //滚动间隔
+
+
+            _con.clone().insertAfter(_con);//初始化克隆
+
+            //样式控制
+            var num = d.num;
+            var _p = this.find('li');
+            var allNum = _p.length;
+
+            _p.eq(num).addClass(_s);
+
+
+            var timeID = setInterval(Up,_time);
+            this.hover(function(){clearInterval(timeID)},function(){timeID = setInterval(Up,_time);});
+
+            function Up(){
+                _con.animate({marginTop: '-'+_conChildH});
+                //样式控制
+                _p.removeClass(_s);
+                num += 1;
+                _p.eq(num).addClass(_s);
+
+                if(_conH == _conChildH){
+                    _con.animate({marginTop: '-'+_conChildH},"normal",over);
+                } else {
+                    _conChildH += _temp;
+                }
+            }
+            function over(){
+                _con.attr("style",'margin-top:0');
+                _conChildH = _temp;
+                num = 1;
+                _p.removeClass(_s);
+                _p.eq(num).addClass(_s);
+            }
+        }
+    })(jQuery);
+
+    $('#MScroll').FontScroll({time: 3000,num: 1});
+
+</script>
+</if>

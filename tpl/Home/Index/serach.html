@@ -1,0 +1,205 @@
+<include file="Public:header"/>
+ <link rel="stylesheet" href="__PUBLIC_CSS__/share.css?3"/>
+<style>
+	.index_rwxq{width: 92%;
+		margin-left: 4%;}
+	.index_title{min-height: 30px}
+	.index_tjrw{margin-top:10px;
+		height:100%;}
+	.index_rwxq img{
+		width: 4rem;margin:1rem 0.5rem;
+		height:4rem;;}
+	.index_wzns{
+		width:55%;padding-top:5px}
+	.index_title{
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+	.index_syrw{
+		margin-top:3px;}
+	.category .col {
+		float: left;
+		width: 20%!important;
+		margin-top: 7px;;
+	}
+	.category .content img{
+		width: 50px;;
+	}
+	.category .content{
+		text-align: center;
+	}
+	.category .content span {
+		display: block;
+		margin-top: 1px;
+		margin-bottom: 5px;;
+	}
+	.category .content span.active{
+		color: #704eea;
+	}
+
+	#select_div>div{
+		width:92%;
+		padding:0px 4%;
+	}
+	#select_div>div>span{
+		display: inline-block;
+		width:30.9%;
+		text-align: center;
+		margin:10px 0;
+	}
+	#select_div>div>span:nth-of-type(2){
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+	}
+	#select_div>div select{border:none}
+
+</style>
+<body class="gray_bg">
+<!-- 头部部分 开始 -->
+
+<div class="body_main task_box mt tline" style="margin-top: 0px;border: none;overflow-x: hidden">
+   <header class="top_header">
+    <div class="left"><a href="{:U('Task/index')}" class="return"></a></div>
+    <div class="title">任务大厅</div>
+   </header>
+	<div style="height: 40px;"></div>
+
+	<div style="background: linear-gradient(1turn,#946aff,#704eea  96%);;">
+		<div style="padding:3% 6%">
+			<input id="serachInput" value="{$serach_key?$serach_key:''}" type="text" style="width: 100%;border-radius: 7px;height: 30px;text-align: center" placeholder="输入关键词">
+		</div>
+	</div>
+
+	<div style="padding: 3%">
+		<div class="row category">
+			<volist name="cate_list" id="vo">
+				<div class="col s3 col-5x">
+					<div class="content">
+						<a href="{:U('Index/serach',array('cid'=>$vo['id']))}">
+							<img src="{$vo['ico']}" alt="">
+							<span class="{$vo['id']==$cid?'active':''}">{$vo['name']}</span>
+						</a>
+					</div>
+				</div>
+			</volist>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+
+	<div id="select_div" style="border-top:1px solid #ccc;border-bottom:1px solid #ccc">
+		<div>
+			<span>
+				<select name="" id="">
+					<option value="">普通用户</option>
+					<option value="">普通用户</option>
+					<option value="">普通用户</option>
+					<option value="">普通用户</option>
+				</select>
+			</span>
+			<span>普通用户</span>
+			<span>普通用户</span>
+		</div>
+	</div>
+
+    <div class="task_list" data-key="{$serach_key}" data-cid="{$cid}" style="margin-top:0;">
+		<p class="index_tjrw" style="margin-left:4%">{$serachName} <a href="" style="float: right;color: #9a9292;">more > 　</a></p>
+
+		<volist name="task_list" id="vo">
+        	<a href="{:U('Task/show',array('id'=>$vo['id']))}">
+        	  	<div class="index_rwxq" style="width: 92%;margin-left: 4%;">
+        		<img src="{$vo.ico}"/>
+        		
+        		<div class="index_wzns">
+        			<p class="index_title">{$vo.title}</p>
+        			<p class="index_ffl">
+						<span>{$vo.name}</span>
+						<span class="index_gjrw">{$vo.levelname}</span>
+					</p>
+        			<p class="index_syrw">剩余数量：<span>{$vo['max_num'] - $vo['apply_num']}/{$vo['max_num']}</span></p>
+        		</div>
+        		
+        		<p class="index_qqq">
+        			{$vo.price}
+        			<span></span>
+        		</p>
+        		
+        	</div>
+        	</a>
+        </volist>
+        </ul>
+    </div>
+
+   
+
+    
+</div>
+<script>
+	$(function () {
+
+        //回车直接搜索
+        $('#serachInput').keydown(function(e){
+            if(e.keyCode==13){
+                if ( $('#serachInput').val() !="") {
+                    var indexReload=layer.open({type: 2});
+                    window.location.href = '/Home/Index/serach.html'+"?key="+$('#serachInput').val();
+                }
+            }
+        });
+
+
+    });
+    var nStart = 10;
+    var isbool = true;
+
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(this).height();
+        if(scrollTop + windowHeight >= scrollHeight && isbool == true){
+            isbool = false;
+            jiazai();
+        }
+    });
+    //jiazai();
+    function jiazai(){
+        if(nStart >= 61) {
+            layer.open({
+                content: '没有更多的任务'
+                ,skin: 'msg'
+                ,time: 2
+            });
+            return false;
+        }else{
+            var _this = $(".task_list");
+            var taskname;
+            var iconame;
+            var levelname;
+            layer.open({
+                type: 2,
+                content: '加载中...'
+            });
+            $.post("/index.php/Home/Index/serach.html",{start: nStart,key:$('.task_list').attr('data-key'),cid:$('.task_list').attr('data-cid'),level:$('.task_index_rwlbfl').attr('data-level')},function(res){
+                $.each(res['info'], function(i,item){
+                    _this.append('<a href="/home/Task/show/id/'+item.id+'.html">\
+<div class="index_rwxq" "><img src="'+item.ico+'"/>\
+<div class="index_wzns">\
+<p class="index_title">'+item.title+'</p>\
+<p class="index_ffl"> <span>'+item.name+' </span> <span class="index_gjrw">'+item.levelname+'</span> </p>\
+<p class="index_syrw">剩余数量：<span>'+item.leftnum+'</span>/'+item.max_num+'</p>\
+</div>\
+<p class="index_qqq">+'+item.price+'<span></span></p>\
+</div>\
+</a>');
+                });
+                isbool = true;
+                layer.closeAll();
+            });
+            nStart += 10;
+        }
+    };
+</script>
+<include file="Public:footer"/>
+</body>
+</html>

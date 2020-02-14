@@ -1,0 +1,41 @@
+
+<include file="Public:header" />
+
+<body>
+
+<div id="body">
+    <header class="top_header">
+        <div class="left"><a href="javascript:" data-url="{:U('Member/index')}" class="return go-back"></a></div>
+        <div class="title">{$title}</div>
+    </header>
+    <div class="body_main">
+        <form class="submit-ajax" action="{:U('bdwx')}">
+            <div class="form_reg" style="margin-top:40px">
+                <p>
+                    <input value="{$weixin}" type="text" name="weixin" id="weixin" placeholder="请输入微信号" class="input-text" />
+                </p>
+
+            </div>
+            <div class="reg_btn">
+                <button type="submit" id="submit" class="" disabled>确认修改</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+
+<script>
+    $(function(){
+        $('.input-text').keyup(function(){
+            if( $('#phone').val() != '' && $('#password').val() != '' && $('#code').val() != '' ) {
+                $('#submit').addClass('active');
+                $('#submit').removeAttr("disabled");
+            } else {
+                $('#submit').removeClass('active');
+                $('#submit').attr("disabled","disabled");
+            }
+        })
+    });
+
+</script>

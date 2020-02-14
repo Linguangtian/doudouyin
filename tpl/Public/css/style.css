@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+* { margin: 0; padding: 0; }
+*:focus { outline: none; }
+a { text-decoration: none; }
+body { font-size: 14px; }
+ul li{ list-style-type:none ;}
+
+.clear:after { content: ""; display: block; height: 0; clear: both; }
+.loadingParent { margin: 0 auto; background: #6143d5; padding: 20px 0 5px; position: relative; }
+.loadingParent p { position: absolute; transform: translate(-50%, -50%); font-size: 16px; color: #fff; top: 60%; left: 50%; }
+.loadingParent canvas { display: block; margin: 0 auto; margin-bottom: 20px; }
+.koujia { background: url(../images/bg79.png) no-repeat; background-size: 100% 100%; color: #fff; padding: 10px 0; }
+.koujia a { color: #fff; display: block; width: 49.5%; float: left; text-align: center; }
+.koujia a:nth-child(1) { }
+.koujia a span { font-size: 16px; font-weight: bold; }
+.koujia a p { color: #b5a1ff; }
+.fenshu { border-bottom:10px solid #f8f8f8}
+.fenshu h2 { height: 40px; line-height: 40px; padding: 0 10px; font-weight: bold; font-size: 14px; }
+.ques-section { width: 960px; margin: 0 auto 10px; padding: 20px; border-radius: 2px; background-color: #fff; }
+.ques-section-item { width: 293px; position: relative; float: left; }
+.ques-item-title { font-size: 18px; line-height: 24px; margin-bottom: 15px; font-weight: normal; color: #333; }
+.ques-section-card { position: relative; height: 424px; text-align: center; border: 1px solid #f2f2f2; border-radius: 2px; background-color: #fafafa; }
+.ques-card-head { position: absolute; top: 0; left: 0; width: 100%; height: 30px; padding-top: 48px; border-radius: 2px 2px 0 0; }
+.ques-card-gul { background-color: #f55727; background-image: -webkit-radial-gradient(50% 3%, circle, #f07a56, #f55727); background-image: radial-gradient(circle at 50% 3%, #f07a56, #f55727); height: 78px; }
+.ques-card-org { background-color: #f59b00; background-image: -webkit-radial-gradient(50% -6%, circle, #ffb83d 2%, #f59b00); background-image: radial-gradient(circle at 50% -6%, #ffb83d 2%, #f59b00); height: 78px; }
+.ques-card-bul { background-color: #397bee; background-image: -webkit-radial-gradient(50% -45%, circle, #53a7f5, #397bee); background-image: radial-gradient(circle at 50% -45%, #53a7f5, #397bee); height: 78px; }
+.ques-card-title { font-size: 18px; font-weight: 500; line-height: 24px; position: relative; padding-top: 15px; color: #fff; }
+.ques-card-text { line-height: 18px; position: relative; margin-top: 6px; opacity: .7; color: #fff; font-weight: normal; }
+.ques-card-num { overflow: hidden; margin: 40px auto 0; border-radius: 50%; position: relative; display: block; width: 80px; height: 80px; }
+.ques-card-num:before { position: absolute; top: 0; left: 0; width: 76px; height: 76px; content: ''; border: 2px solid rgba(255,255,255,.9); border-radius: 100%; }
+.ques-card-num:hover:before { background-color: rgba(0,0,0,.3); }
+.ques-card-num img { width: 100%; height: auto; display: block; border: none !important; }
+.ques-card-name { font-size: 18px; line-height: 24px; margin-top: 10px; }
+.ques-card-major { line-height: 18px; margin-top: 6px; color: #a3a3a3; }
+.ques-card-field { font-size: 12px; line-height: 18px; height: 18px; margin-top: 25px; text-align: center; color: #000; }
+.ques-card-tag { font-size: 12px; margin: 6px 0 25px; }
+.ques-card-tag span { line-height: 17px; display: inline-block; max-width: 84px; height: 18px; padding: 0 6px; color: #fa9600; border: 1px solid #f5cc84; border-radius: 2px; margin: 0 4px; }
+.ques-card-help { display: block; margin: 20px auto; line-height: 29px; width: 90px; height: 30px; text-align: center; color: #fff; border-radius: 2px; background-color: #2fa9f1; }
+.ques-card-bots { line-height: 18px; margin-top: 25px; color: #a3a3a3; }
+.ques-section-item+.ques-section-item { margin-left: 20px; }
+.ques-card-title-top { padding: 27px 0; }
+.ques-card-list { text-align: left; }
+.ques-card-list li { position: relative; }
+
+.ques-list-box { position: relative; display: block;  padding: 10px; border-bottom:1px solid #e7e7e7 }
+.ques-list-head { position: relative; float: left; padding-right: 8px; }
+.ques-list-image { position: relative; display: block; width:70px; height: 26px; line-height:27px; text-align:center; z-index: 2; }
+.ques-list-image:before { position: absolute; top: 0; left: 0; width:70px; height:26px; content: ''; border: 1px solid #6143d5; border-radius:15px; }
+.ques-list-image img { border-radius: 100%; width: 100%; height: auto; display: block; border: none; }
+.ques-list-name { overflow: hidden; margin-right: 33px; }
+.ques-list-name-head { line-height:31px; color: #666; }
+.ques-list-name-text { font-size: 12px; line-height: 16px; margin-top: 2px; color: #a3a3a3; }
+.ques-list-name-icon { font-size: 12px; line-height: 24px; position: absolute; top: 50%; right: 14px; display: block; margin-top: -13px; text-align: center; color: #fff; background-position: 0 -60px; width: 25px; height: 25px; background-image: url("../images/icon-body.png") }
+.item-icon001{ background: url("../images/diyi.png") no-repeat !important; }
+.item-icon002{ background: url("../images/dier.png") no-repeat !important; }
+.item-icon003{ background: url("../images/disan.png") no-repeat !important; }
+.xianzhi{ padding:10px;}
+.xianzhi h3{ font-size:14px; font-weight:bold; margin-top:10px; margin-bottom:10px;}
+.xianzhi p{ line-height:20px;}
+
+.fabulist ul{ padding:0 5%; box-sizing:border-box; border-bottom:1px solid #e7e7e7; background:#fff;}
+.fabulist ul li{  width:45%; margin-right:4.5%; height:30px; float:left; line-height:30px; margin-top:5px; color:#333; text-align:center;}
+.fabulist ul li:last-child{ margin-right:0;}
+.fabulist ul{ background:#fff; width:100%; height:40px;}
+.fabulist ul li.on{ background:#704eea; border-radius:20px; color:#fff;}
+.fabulist .content{ margin-top:10px; background:#fff;}
+.fabulist .content .con{  display:none; width:100%; border-top:0;}
+
+
+.jilu{ width:100%; border-bottom:1px solid #ddd; background:#fff; padding: 10px 15px; box-sizing:border-box;}
+.jilu .chenggong{ display:block; width:50px; margin-top:10px; margin-left:15px; height:25px; font-size:14px; color:#333; line-height:25px; border-radius:5px; text-align:center; }
+.jilu .shibai{ display:block; width:50px; margin-top:10px; margin-left:15px; height:25px; font-size:14px; color:#333; line-height:25px; border-radius:5px; text-align:center; }
+.jilu p:nth-child(1){ width:80%; float:left;}
+.jilu p:nth-child(2){width:20%; float:left; text-align:right; font-size:16px; line-height:55px;}
+.jilu p span{ display:block;}
+.jilu p span:nth-child(1){ margin-bottom:3px;}

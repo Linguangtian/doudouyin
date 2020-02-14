@@ -1,0 +1,1 @@
+a:15:{s:7:"website";s:0:"";s:8:"web_logo";s:0:"";s:7:"company";s:0:"";s:3:"tel";s:0:"";s:5:"wx_kf";s:0:"";s:12:"wx_kf_qrcode";s:0:"";s:5:"qq_kf";s:0:"";s:12:"qq_kf_qrcode";s:0:"";s:5:"bfb_1";s:2:"30";s:5:"bfb_2";s:2:"20";s:5:"bfb_3";s:2:"10";s:6:"charge";s:0:"";s:8:"zx_bfb_1";i:0;s:8:"zx_bfb_2";i:0;s:6:"fx_bfb";i:0;}

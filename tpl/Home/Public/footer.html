@@ -1,0 +1,83 @@
+<style type="text/css">
+	.footer li{
+		width: 20%;
+        padding:5px 0;
+	}
+
+    .fabu{
+        /*font-size: 20px;display: block;border-radius: 50%;margin: 0 auto;*/
+        /*width:50px;height: 50px;border: 1px solid red;*/
+        /*margin-top: -30px;*/
+        /*z-index: 999;;position:absolute;*/
+
+        border: 1px solid gainsboro;
+        border-radius: 50%;
+        background: #f7f7f7;
+        width: 48px;
+        line-height: 48px;
+        margin:0 auto;
+        height: 48px;
+        font-size: 2.5rem;
+        margin-top: -5px;
+    }
+    .user_index_shza{
+        margin-bottom:150px;
+    }
+    .divright{
+        position: relative;
+        right: 10px;;
+        top: -35px;;
+        background:#c72c4f;
+        width: 15px;
+        height: 15px!important;
+        float: right;
+        border-radius: 50%;
+        color: #fff;
+    }
+    .body_main{
+        margin-bottom: 76px;;}
+    .footer li span.hide{display: none}
+
+</style>
+<footer class="footer">
+    <ul>
+        <li <if condition="CONTROLLER_NAME eq 'Index'"> class="active"</if> >
+            <a href="{:U('Index/index')}">
+                <span><i class="icon_home" style="width: 20px;height: 20px;"></i></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li <if condition="CONTROLLER_NAME eq 'Task'"> class="active"</if> >
+            <a href="{:U('Task/index')}">
+                <span><i class="icon_task" style="width: 20px;height: 20px;"></i></span>
+              <p>VIP</p>
+            </a>
+        </li>
+        <li <if condition="CONTROLLER_NAME eq 'Task2'"> class="active"</if> >
+        <div class="fabu">
+            <a href="{:U('Task/handle')}" style="font-size: 25px">+</a>
+        </div>
+
+        </li>
+		<li <if condition="CONTROLLER_NAME eq 'Member' and ACTION_NAME eq 'notice'"> class="active"</if> >
+           <a href="{:U('Member/notice')}">
+                <span><i class="icon_xiaoxi" style="width: 20px;height: 20px;"></i></span>
+             <p>消息 </p>
+               <span class="divright {$_SESSION['weidu_xiaoxi'] ? 'show':'hide'}">{$_SESSION['weidu_xiaoxi']}</span>
+            </a>
+        </li>
+        <li <if condition="CONTROLLER_NAME eq 'Member' and ACTION_NAME eq 'index' "> class="active"</if> >
+            <a href="{:U('Member/index')}">
+                <span><i class="icon_user" style="width: 20px;height: 20px;"></i></span>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<script>
+    $(function () {
+        $('.footer').prev('div').css('margin-bottom','150px')
+    })
+
+</script>

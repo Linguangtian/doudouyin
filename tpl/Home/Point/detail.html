@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="wap-font-scale" content="no">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC_CSS__/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC_CSS__/share.css">
+</head>
+<body style="background:#f8f8f8">
+   <header class="top_header " style=" background-color:none">
+
+        <div class="left"><a href="javascript: history.back(-1)" class="return go-back"></a></div>
+
+        <div class="title">{$title}</div>
+
+    </header>
+    <div style="height:50px"></div>
+	<div class="fabulist">
+           <ul class="clear">
+               <li>已加信用</li>
+               <li>已扣信用</li>
+           </ul>
+           <div class="content">
+               <div class="con con1">
+                   <div class="jinebox margin0">
+                       <volist name="jia_list" id="vo">
+                        <div class="jilu clear">
+                            <p>
+                                <span>{$vo.type_text}</span>
+                                <span>{$vo.create_time|date='Y-m-d H:i:s',###}</span>
+                            </p>
+                            <p>
+                               <span class="chenggong">+{$vo.point}</span>
+                              
+                            </p>
+                        </div>
+                       </volist>
+                    </div>
+               </div>
+               <div class="con con2">
+                   <div class="jinebox margin0">
+                       <volist name="jian_list" id="vo">
+                        <div class="jilu clear">
+                            <p>
+                                <span>{$vo.type_text}</span>
+                                <span>{$vo.create_time|date='Y-m-d H:i:s',###}</span>
+                            </p>
+                            <p>
+                               <span class="chenggong">-{$vo.point}</span>
+                              
+                            </p>
+                        </div>
+                       </volist>
+                    </div>
+               </div>     
+           </div>
+    </div>
+        
+        
+        
+<script src="__PUBLIC_JS__/jquery-1.11.2.min.js"></script>
+<script>
+    var type = "{$type}";
+    if (type == 1) {
+        $(".fabulist ul li").eq(0).addClass("on");
+        $(".fabulist .content .con").eq(0).show();
+    } else {
+        $(".fabulist ul li").eq(1).addClass("on");
+        $(".fabulist .content .con").eq(1).show();
+    }
+
+
+    $(".fabulist ul li").click(function(){
+        var index=$(this).index();
+       $(this).addClass("on").siblings().removeClass("on");
+       $(".fabulist .content .con").eq(index).show().siblings().hide();
+    })
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,26 @@
+<include file="Public:header"/>
+
+<body class="gray_bg">
+<div class="body_main">
+    <!-- 头部部分 开始 -->
+    <header class="top_header">
+        <div class="left"><a href="javascript:" class="return go-back"></a></div>
+        <div class="title">{$title}</div>
+    </header>
+    <!--主体部分 开始-->
+    <div class="page_main tline mt">
+        <div class="page_list">
+            <ul>
+                <volist name="list" id="vo">
+                    <li>
+                        <a href="{:U('show',array('id'=>$vo['id']))}">{$vo.title}<span>&nbsp;</span></a>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+
+    <include file="Public:footer"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{~echo sp_cfg('website')}</title>
+    <bootstrapcss />
+    <icheckcss />
+
+</head>
+<body>
+
+<!-- 导航栏开始 -->
+<div class="bjy-admin-nav">
+    <i class="fa fa-home"></i> 首页
+    &gt;
+    信用分参数设置
+</div>
+<!-- 导航栏结束 -->
+<ul id="myTab" class="nav nav-tabs">
+   <li class="active">
+        <a href="javascript:">信用分参数设置</a>
+    </li>
+</ul>
+<form class="form-inline" method="post">
+    <table class="table table-bordered table-hover" style="max-width: 800px;">
+        <tr>
+            <th width="190">
+                用户注册
+            </th>
+            <td>
+                <input type="text" name="reg_point" value="{$info.reg_point}" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <th width="190">
+                任务
+            </th>
+            <td>
+                信用低于<input type="text" name="renwu_point" value="{$info.renwu_point}" class="form-control" style="width: 30%"/>，
+                每天只能报名完成<input type="text" name="renwu_count" value="{$info.renwu_count}" class="form-control" style="width: 30%"/>次任务
+
+            </td>
+        </tr>
+        <tr>
+            <th width="190">
+                封号信用分
+            </th>
+            <td>
+                <input type="text" name="fh_point" value="{$info.fh_point}" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <th width="190">
+                签到（加）
+            </th>
+            <td>
+                <input class="input col-xs-12 col-sm-12" type="text" name="sign_point" value="{$info.sign_point}" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <th width="190">
+                完成当日首次任务（加）
+            </th>
+            <td>
+                <input class="input col-xs-12 col-sm-12" type="text" name="day_point" value="{$info.day_point}" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <th width="190">
+                未在规定时间内完成任务（减）
+            </th>
+            <td>
+                <input class="input col-xs-12 col-sm-12" type="text" name="wwc_point" value="{$info.wwc_point}" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <th width="190">
+                未按要求完成任务（减）
+            </th>
+            <td>
+                <input class="input col-xs-12 col-sm-12" type="text" name="wayq_point" value="{$info.wayq_point}" class="form-control"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input class="btn btn-success" type="submit" value="提交">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<bootstrapjs />
+<icheckjs color="blue" />
+
+</body>
+</html>

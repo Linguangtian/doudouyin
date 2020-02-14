@@ -1,0 +1,249 @@
+{~$title = $show['title']}
+<include file="Public:header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/clipboard.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC_CSS__/cdn.css">
+<style>
+    .show_rwbbzz img{
+        width:100%;
+    }
+</style>
+<body>
+<header class="top_header">
+    <div class="left"><a href="javascript:" data-url="{:U('index')}" class="return go-back" ></a></div>
+    <div class="title">任务详情</div>
+    <div class="right"></div>
+</header>
+
+<div class="body_main" style="margin-top: 45px">
+    <!-- 头部部分 开始 -->
+ 
+ <div class="show_index_top">
+     <div class="se-kl clear" <if condition="$is_ling eq 0"> style="display: none;" <else /> style="display: block;" </if> >
+
+        <div class="se-info">距离结束还剩</div>
+        <div class="se-count">
+            <div class="se-day"></div>
+            <div class="se-hour"><span class="se-txt">00</span></div>
+            <div class="maohao">:</div>
+            <div class="se-min"><span class="se-txt">00</span></div>
+            <div class="maohao">:</div>
+            <div class="se-sec"><span class="se-txt">00</span></div>
+        </div>
+    </div>
+
+ 	<!--<p class="shop_index_ts"><a href="http://51gofishing.cn/index.php/Home/Page/show/id/14.html">新手指南 做前必看</a></p>-->
+ 	<p class="shop_index_ts"><a href="{:U('Task/showw', ['id' => 23])}">新手指南 做前必看</a></p>
+
+ 	<div class="show_index_f">
+ 		<img src="{$sys_config.web_logo}"/>
+ 		<p class="show_dypl">{$show.title}</p>
+ 		<p class="show_wqq">+{$show.price|floatval}元</p>
+ 	</div>
+ 	
+ 	<div class="show_index_sss">
+ 		<p style=""> <span>任务描述：</span> {$show.info}</p>
+ 	</div>
+ 	
+ 	<p style="width: 100%;height: 10px;background: #ededed;float: left;margin-top: 10px;"></p>
+ 	<div class="show_renws">
+ 		<p class="show_shbz">审核标准：</p>
+ 		<p class="show_sssss">
+ 			<img src="__PUBLIC_IMAGES__/HTB1zHXJcLWG3KVjSZPc762kbXXav.png"/>
+ 			有头像
+ 		</p>
+ 		
+ 		<p class="show_sssss">
+ 			<img src="__PUBLIC_IMAGES__/HTB1zHXJcLWG3KVjSZPc762kbXXav.png"/>
+ 			有作品
+ 		</p>
+ 		
+ 		<p class="show_sssss">
+ 			<img src="__PUBLIC_IMAGES__/HTB1zHXJcLWG3KVjSZPc762kbXXav.png"/>
+ 			案例标准
+ 		</p>
+ 		<div class="copy_btn">
+          <div class="t3" style="display:n;color:#fff;height: 20px;background: ;overflow: hidden;">{$show.info}<input id="foo" type="text" value="{$show.info}" style="height: 1px;width: 1px;position: absolute;top: 0;left: 0;"></div>
+ 		<p class="show_zpllj" style="overflow: hidden;" id="text">{$show.info} <input id="foo" type="text" value="{$show.info}" style="height: 1px;width: 1px;position: absolute;top: 0;left: 0;"></div> </p>
+      <button type="button" class="show_djfzz copy" data-clipboard-action="copy" data-clipboard-target="#foo" style="background:#fff;">点击复制</button>
+           <if condition="$member_client_info['platform'] eq 'app'">
+                </if>
+          </div>
+ 	</div>
+ 	
+ </div>
+ 
+ <p style="width: 100%;height: 10px;background: #ededed;float: left;margin-top: 10px;"></p>
+
+
+ 	<if condition="$btn_status eq 1">
+        <a href="#" class="show_lllqqqe">
+                <button type="button" class="bala-btn get_task" style="margin-top: 20px;margin-bottom: 20px;background:linear-gradient(90deg,#9672f7,#7045f2) ;border: none;margin-top: 0.8rem;">{$status_text}</button>
+        </a>
+            <else/>
+        <a href="{$redirect_url}" class="show_lllqqqe">
+                <button type="button" class="bala-btn" style="margin-top: 20px;margin-bottom: 20px;background: #fff;background: linear-gradient(90deg,#9672f7,#7045f2);border: none;margin-top: 0.8rem;">{$status_text}</button>
+        </a>
+            </if>
+
+
+ <div class="show_srwssss">
+ 	<p class="show_rwbbzz">任务步骤：</p>
+ 	<!--{$show.content}-->
+     <img style="width: 100%" src="/Uploads/image/20190704/20190704200839_50092.png" alt="" />
+     <img style="width: 100%" src="/Uploads/image/20190704/20190704200839_31389.png" alt="" />
+     <img style="width: 100%" src="/Uploads/image/20190704/20190704200839_10092.png" alt="" />
+ </div>
+
+<!-- 底部联系部分 开始 -->
+
+</body>
+</html>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var oDate = new Date();
+            var nowTime = oDate.getTime(); //现在的毫秒数
+            oDate.setDate(oDate.getDate() + 1); // 设定截止时间为第二天
+            var targetDate = new Date(oDate.toLocaleDateString());
+            run(targetDate);
+        });
+
+        function run(enddate) {
+            getDate(enddate);
+
+            setInterval("getDate('" + enddate + "')", 500);
+        }
+
+        function getDate(enddate) {
+            var oDate = new Date(); //获取日期对象
+
+            var nowTime = oDate.getTime(); //现在的毫秒数
+            var enddate = new Date(enddate);
+            // var targetTime = enddate.getTime(); // 截止时间的毫秒数
+            var targetTime = "{$show.end_time}" * 1000; // 截止时间的毫秒数
+            var second = Math.floor((targetTime - nowTime) / 1000); //截止时间距离现在的秒数
+
+            var day = Math.floor(second / 24 * 60 * 60); //整数部分代表的是天；一天有24*60*60=86400秒 ；
+            // second = second % 86400; //余数代表剩下的秒数；
+            var hour = Math.floor(second / 3600); //整数部分代表小时；
+            second %= 3600; //余数代表 剩下的秒数；
+            var minute = Math.floor(second / 60);
+            second %= 60;
+
+            // var spanD = $('.se-txt')[0];
+            var spanH = $('.se-txt')[0];
+            var spanM = $('.se-txt')[1];
+            var spanS = $('.se-txt')[2];
+
+            // spanD.innerHTML = tow(day);
+            spanH.innerHTML = tow(hour);
+            spanM.innerHTML = tow(minute);
+            spanS.innerHTML = tow(second);
+        }
+
+        function tow(n) {
+            return n >= 0 && n < 10 ? '0' + n : '' + n;
+        }
+    </script>
+<script>
+    //复制文案
+    var clipboard = new ClipboardJS('.copy');
+    clipboard.on('success', function(e) {
+        sp_alert('复制成功');
+    });
+
+    clipboard.on('error', function(e) {
+        sp_alert('复制信息出错，请手动复制');
+    });
+
+    //领取任务
+    $('.get_task').click(function(){
+        var task_id = "{$show.id}";
+        var url = "{:U('get_task')}";
+        $.post(url,{id:task_id},function(data){
+            if( data.status == 1 ) {
+                sp_alert(data.info);
+                $('.bala-btn').css('background-color','#ccc').html('任务已领取');
+                $('.se-kl').show();
+            } else {
+                sp_alert(data.info);
+            }
+        },'json')
+    })
+
+    function save_img(){
+        var http_host = "http://<?php echo $_SERVER['HTTP_HOST']?>";
+        var num = 0;
+        $(".content img").each(function(){
+            num = num+1;
+            var img_path = $(this).attr("src");
+            if( img_path.indexOf('http') == -1 ) {
+                img_path = http_host+img_path;
+            }
+            lbuilder.Native.saveImage(img_path, function(message){
+
+            }, function(err){
+                sp_alert("save fail"+err);
+            })
+        });
+
+        sp_alert('图片已经保存到相册，数量（'+num+'张）');
+
+        //保存图片到相册
+        /*lbuilder.Native.saveImage(img, function(message){
+            sp_alert('二维码已经保存到相册');
+        }, function(err){
+            sp_alert("save fail"+err);
+        });*/
+    }
+
+    function test(){
+        //保存图片到相册
+        /*lbuilder.Native.saveImage("http://www.lbuilder.com/index/assets/images/logo.png", function(message){
+            alert("save success");
+        }, function(err){
+            alert("save fail"+err);
+        });*/
+
+
+        Wechat.share({
+            message: {
+                title: "Hi, here",
+                description: "That is description.",
+                thumb: "http://www.svip56.cn/tpl/Public/images/banner.png",
+                mediaTagName: "TEST-TAG-002",
+                messageExt: "这是第三方带的测试字段ddd",
+                messageAction: "<action>dotalist</action>",
+                media: {
+                    type: Wechat.Type.WEBPAGE,
+                    webpageUrl: "http://bb.szwangyesheji.com/"
+                }
+            },
+            scene: Wechat.Scene.TIMELINE   // share to Timeline
+        }, function (data) {
+            alert("Success"+JSON.stringify(data));
+        }, function (reason) {
+            alert("Failed: " + JSON.stringify(reason));
+        });
+
+        /*Wechat.share({
+            message: {
+                title: "Hi, there",
+                description: "This is description.",
+                thumb: "http://bb.szwangyesheji.com/tpl/Public/images/banner.png",
+                mediaTagName: "TEST-TAG-001",
+                messageExt: "这是第三方带的测试字段",
+                messageAction: "<action>dotalist</action>",
+                media:{
+                    type:  Wechat.Type.IMAGE,
+                    image: "http://bb.szwangyesheji.com/tpl/Public/images/banner.png"
+                }
+            },
+            scene: Wechat.Scene.TIMELINE   // share to Timeline
+        }, function (data) {
+            alert("Success"+JSON.stringify(data));
+        }, function (reason) {
+            alert("Failed: " + JSON.stringify(reason));
+        });*/
+
+    }
+</script>

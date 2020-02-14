@@ -1,0 +1,50 @@
+<include file="Public:header"/>
+ <link rel="stylesheet" href="__PUBLIC_CSS__/share.css?3"/>
+<body class="gray_bg">
+<!-- 头部部分 开始 -->
+
+<div class="body_main task_box mt tline" style="margin-top: 0px;border: none;">
+  <header class="top_header">
+    <div class="left"><a href="{:U('Index/index')}" class="return"></a></div>
+    <div class="title">任务大厅</div>
+</header>
+   <div class="category-header flex"></div>
+  
+    <div class="task_list">
+        <volist name="task_list.type_0" id="vo">
+
+
+        	<a href="{:U('Task/show',array('id'=>$vo['id']))}">
+        	  	<div class="index_rwxq" style="width: 92%;margin-left: 4%;">
+        		<img src="{$sys_config.web_logo}"/>
+        		
+        		<div class="index_wzns">
+        			<p class="index_title">{$vo.title}</p>
+        			<p class="index_ffl"> <span>抖音评论</span> <span class="index_gjrw">高级任务</span> </p>
+        			<p class="index_syrw">剩余数量：<span>{$vo.max_num}</span></p>
+        		</div>
+        		
+        		<p class="index_qqq">
+        			{$vo.price|floatval}.00元
+        			<span></span>
+        		</p>
+        		
+        	</div>
+        	</a>
+        	
+        	
+        	
+        	
+        	
+        </volist>
+        </ul>
+    </div>
+
+   
+
+    
+</div>
+
+<include file="Public:footer"/>
+</body>
+</html>
