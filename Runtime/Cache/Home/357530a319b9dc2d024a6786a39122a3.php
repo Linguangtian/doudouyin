@@ -153,7 +153,7 @@
  	<div class="show_index_f" style="padding: 10px 0;height: auto;">
  		<!--<img src="<?php echo ($sys_config["web_logo"]); ?>"/>-->
  		<p class="show_dypl" style="padding-left:3%;"><?php echo ($show["title"]); ?></p>
- 		<p class="show_wqq show_dypl" style="width: 20%;padding-right: 3%">+<?php echo ($show["jinbin"]); ?>喵币</p>
+ 		<p class="show_wqq show_dypl" style="width: 20%;padding-right: 3%">+<?php echo ($show["jinbin"]); ?>圈币</p>
         <div style="clear: both;"></div>
         <div style="padding: 3% 3% 0 3%;" class="show_tips">
             <span><?php echo ($show["apply_num"]); ?>人已赚到</span>

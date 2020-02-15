@@ -16,26 +16,27 @@
     &gt;
     后台管理
     &gt;
-    提现申请
+    会员圈币流水
 </div>
 <ul id="myTab" class="nav nav-tabs">
-    <volist name="tixian_status" id="vo">
-       <li  <if condition="$key eq $get['status'] and $get['status'] neq ''">class="active"</if>>
-             <a href="{:U('tixian',array('status'=>$key))}">{$vo}（{~echo intval($status_num_arr[$key])}）</a>
-       </li>
-    </volist>
+    <li class="active">
+        <a href="javascript:">会员圈币流水</a>
+    </li>
 </ul>
 <form class="form-search form-inline" method="get" action="" style="padding: 10px 0; ">
-    <!--状态：
+    业务类型：
     <div class="input-group">
-        <select name="status">
-            <option value="">所有状态</option>
-            <volist name="tixian_status" id="vo">
-                <option value="{$key}" <if condition="$key eq $get['status'] and $get['status'] neq ''">selected</if>>{$vo}</option>
+        <select name="type">
+            <option value="">所有类型</option>
+            <volist name="type_text" id="vo">
+                <option value="{$key}" <if condition="$key eq $get['type'] and $get['type'] neq ''">selected</if>>{$vo}</option>
             </volist>
         </select>
-    </div>-->
-
+    </div>
+    会员ID：
+    <div class="input-group">
+        <input type="text" name="member_id" value="{$get.member_id}" class="input-sm search-query" placeholder="会员ID">
+    </div>
     时间段：
     <div class="input-group">
         <input type="text" name="start_date" value="{$get.start_date}" class="input-sm search-query date-picker" data-date-format="yyyy-mm-dd" autocomplete="off" placeholder="起始日期">
@@ -50,49 +51,37 @@
     </div>
 </form>
 <div style="padding-bottom: 10px;">
-    <div class="btn btn-xs btn-danger">提现金额：￥{$total.price|floatval}</div>
-    <div class="btn btn-xs btn-warning">手续费：￥{$total.charge_price|floatval}</div>
-    <div class="btn btn-xs btn-success">实际支出：￥{$total.actual_price|floatval}</div>
+    <div class="btn btn-xs btn-danger">
+        <if condition="$get['type'] lt 10">
+            总佣金：￥{$total_price}
+            <else/>
+            总计：￥{$total_price}
+        </if>
+
+    </div>
 </div>
-<table class="table table-hover ">
+<table class="table table-striped table-bordered table-hover table-condensed">
     <tr>
-        <th width="60">编号</th>
+        <th>ID</th>
+        <th>账号</th>
         <th>姓名</th>
-        <th>电话</th>
-        <th>提现账户</th>
-        <th>提现圈币</th>
-        <th>提现金额</th>
-        <th>手续费</th>
-        <th>实际提现金额</th>
-        <th>提交时间</th>
-        <th>状态</th>
-        <th>审核/操作</th>
+        <th>收支金额</th>
+        <th>描述</th>
+        <th>时间</th>
+
     </tr>
     <foreach name="list" item="vo">
         <tr>
             <td>{$vo.id}</td>
+            <td>{$vo.username}</td>
             <td>{$vo.nickname}</td>
-            <td>{$vo.phone}</td>
-            <td>
-                <p>开户银行：{$vo.bank_name}</p>
-                <p>开户人姓名：{$vo.bank_user}</p>
-                <p>银行卡号：{$vo.bank_number}</p>
-            </td>
-            <td>{$vo.jinbin}</td>
-            <td>￥{$vo.price}</td>
-            <td>{$vo.charge}%</td>
-            <td>￥{$vo.actual_price}</td>
-            <td>{$vo.create_time|date='Y-m-d H:i',###}</td>
-            <td>{$vo.status_text}</td>
-            <td>
-                <if condition="$vo['status'] eq 0">
-                    <a href="javascript:;" class="btn btn-default btn-xs" data-id="{$vo.id}" data-title="{$vo.nickname}" data-admin_remark="{$vo.admin_remark}" data-price="{$vo.price|abs}" data-status="{$vo.status}" onclick="edit(this)">审核</a>
-                    <else/>
-                    <span class="status{$vo.status}">
-                    {$vo.status_text}
-                    </span>
-                </if>
-            </td>
+            <if condition="$vo['type'] eq 1">
+                <td style="color: green"> +{$vo.c_jinbin}</td>
+                <else/>
+                <td style="color: red"> -{$vo.c_jinbin}</td>
+            </if>
+            <td>{$vo.dsc}</td>
+            <td>{$vo.create_time}</td>
         </tr>
     </foreach>
 </table>
@@ -130,7 +119,7 @@
                         <tr>
                             <th>处理状态：</th>
                             <td>
-                                <select name="status" id="status" class="form-control">
+                                <select name="tixian_status" id="tixian_status" class="form-control">
                                     <volist name="tixian_status" id="vo">
                                         <option value="{$key}">{$vo}</option>
                                     </volist>
@@ -167,11 +156,11 @@
         var title=$(obj).attr('data-title');
         var price=$(obj).attr('data-price');
         var admin_remark=$(obj).attr('data-admin_remark');
-        var status=$(obj).attr('data-status');
+        var tixian_status=$(obj).attr('data-status');
         $("input[name='id']").val(id);
         $("input[name='title']").val(title);
         $("input[name='price']").val(price);
-        $("#status").val(status);
+        $("#tixian_status").val(tixian_status);
         $("#admin_remark").val(admin_remark);
         $('#apply-edit').modal('show');
     }

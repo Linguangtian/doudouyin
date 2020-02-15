@@ -25,7 +25,7 @@
     $orderid = "1234567890";    //每次有任何参数变化，订单号就变一个吧。
     $uid = "";//"3565f0140107b9ca4de44c1d";
     $token = "";//"f37b3b688b0c9c3eb55572c6848d84a0";
-    $return_url = 'http://47.114.74.253//payreturn.php';
+    $return_url = 'http://47.114.74.253/payreturn.php';
     $notify_url = 'http://www.demo.com/paynotify.php';
     
     $key = md5($goodsname. $istype . $notify_url . $orderid . $orderuid . $price . $return_url . $token . $uid);

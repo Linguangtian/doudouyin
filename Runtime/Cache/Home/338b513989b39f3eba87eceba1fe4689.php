@@ -76,7 +76,7 @@
                 </div>
                 <div class="item">
                     <p class="t">任务金币：</p>
-                    <p class="c"><?php echo ($apply_data["jinbin"]); ?>喵币</p>
+                    <p class="c"><?php echo ($apply_data["jinbin"]); ?>圈币</p>
                 </div>
                 <div class="item">
                     <p class="t">完成状态：</p>
@@ -85,7 +85,7 @@
                 <div class="item">
                     <p class="c">
                     <div class="auto_upload add_upload" style="width: 292px; height: 180px; margin: 0 auto">
-                        <div id="upload-5e46cfd6b532b8065307" class="xb-uploader">
+                        <div id="upload-5e47aeb6003d09010955" class="xb-uploader">
     <div class="queueList">
         <div class="placeholder">
             <div class="filePicker"></div>
@@ -101,7 +101,7 @@
         <div class="btns">
             <div class="webuploader-container filePicker2">
                 <div class="webuploader-pick">继续添加</div>
-                <div style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; overflow: hidden;" id="rt_rt_upload-5e46cfd6b532b8065307">
+                <div style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; overflow: hidden;" id="rt_rt_upload-5e47aeb6003d09010955">
                 </div>
             </div>
             <div class="uploadBtn">开始上传</div>
@@ -112,7 +112,7 @@
 jQuery(function() {
     var $ = jQuery,    // just in case. Make sure it's not an other libaray.
 
-        $wrap = $("#upload-5e46cfd6b532b8065307"),
+        $wrap = $("#upload-5e47aeb6003d09010955"),
 
         // 图片容器
         $queue = $('<ul class="filelist"></ul>')
@@ -174,11 +174,11 @@ jQuery(function() {
     // 实例化
     uploader = WebUploader.create({
         pick: {
-            id: "#upload-5e46cfd6b532b8065307 .filePicker",
+            id: "#upload-5e47aeb6003d09010955 .filePicker",
             label: '',
             multiple : true
         },
-        dnd: "#upload-5e46cfd6b532b8065307 .queueList",
+        dnd: "#upload-5e47aeb6003d09010955 .queueList",
         paste: document.body,
         // accept: {
         //     title: 'Images',
@@ -200,7 +200,7 @@ jQuery(function() {
 
     // 添加“添加文件”的按钮，
     uploader.addButton({
-       id: "#upload-5e46cfd6b532b8065307 .filePicker2",
+       id: "#upload-5e47aeb6003d09010955 .filePicker2",
        label: '继续添加'
     });
 
@@ -396,7 +396,7 @@ jQuery(function() {
                 text += '，失败' + stats.uploadFailNum + '个';
             }
             if (fileCount==stats.successNum && stats.successNum!=0) {
-                $('#upload-5e46cfd6b532b8065307 .webuploader-element-invisible').remove();
+                $('#upload-5e47aeb6003d09010955 .webuploader-element-invisible').remove();
             }
         }
 
@@ -438,7 +438,7 @@ jQuery(function() {
 
             case 'ready':
                 $placeHolder.addClass( 'element-invisible' );
-                $( "#upload-5e46cfd6b532b8065307 .filePicker2" ).removeClass( 'element-invisible');
+                $( "#upload-5e47aeb6003d09010955 .filePicker2" ).removeClass( 'element-invisible');
                 $queue.parent().addClass('filled');
                 $queue.show();
                 $statusBar.removeClass('element-invisible');
@@ -446,7 +446,7 @@ jQuery(function() {
                 break;
 
             case 'uploading':
-                $( "#upload-5e46cfd6b532b8065307 .filePicker2" ).addClass( 'element-invisible' );
+                $( "#upload-5e47aeb6003d09010955 .filePicker2" ).addClass( 'element-invisible' );
                 $progress.show();
                 $upload.text( '暂停上传' );
                 break;

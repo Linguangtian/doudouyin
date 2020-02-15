@@ -110,6 +110,68 @@ class PayController extends AdminBaseController{
         $this->display();
     }
 
+
+
+    //会员圈币流水
+    public function jinbin_log() {
+
+        $type_text = array(
+            '1' => '注册赠送',
+            '2' => '完成任务',
+            '3' => '下级提成',
+            '4' => '充值提成',
+            '9' => '提现失败退回',
+            '100' => '申请提现',
+
+        );
+        $type = I('get.type');
+        $member_id = I('get.member_id');
+        $start_date = I('get.start_date');
+        $end_date = I('get.end_date');
+
+        $map = array();
+
+        if( $type != '' ) $map['a.c_type'] = $type;
+        if( $member_id != '' ) $map['a.member_id'] = $member_id;
+
+        //搜索时间
+        if( !empty($start_date) && !empty($end_date) ) {
+            $start_date =$start_date . "00:00:00";
+            $end_date = $end_date . "23:59:59";
+            $map['_string'] = "( a.create_time >= {$start_date} and a.create_time < {$end_date} )";
+        }
+
+        $model = M('member_jinbin_log')->alias('a');
+        $count = $model->where($map)->count();
+        $page = sp_get_page($count, 20);//分页
+        $firstRow = $page->firstRow;
+        $listRows = $page->listRows;
+
+        $list = M('member_jinbin_log')->alias('a')->join(C('DB_PREFIX').'member as c on a.member_id = c.id','left')
+            ->where($map)
+            ->field('a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number')
+            ->order('a.id desc')->limit("$firstRow , $listRows")
+            ->select();
+        foreach( $list as &$_list ) {
+            $_list['type_text'] = $type_text[$_list['c_type']];
+        }
+        $this->assign('list',$list);
+        $this->assign("Page", $page->show());
+        $this->assign('type_text',$type_text);
+        $this->assign('get',$_GET);
+
+
+
+        //总佣金
+        if( empty($type) ) {
+            $map['a.c_type'] = array('lt',10);
+        }
+        $total_price = M('member_jinbin_log')->alias('a')->where($map)->sum('c_jinbin');
+        $this->assign('total_price',$total_price);
+
+        $this->display();
+    }
+
     /**
      * xiao5    2019年7月9日10:17:32   信用分明细
      */

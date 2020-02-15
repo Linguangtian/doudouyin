@@ -378,41 +378,70 @@ class MemberController extends HomeBaseController{
      */
     public function tixian()
     {
+        $sp_cfg =   sp_cfg('jinbin_scale');
+        if(!$sp_cfg){
+            $this->error('圈币比值不能为空');exit;
+        }
+
+
+        $map['member_id'] = $this->member_id;
+        $map['status'] = 0;
+        $tixian_order_total = M('member_tixian')->where($map)->count();
+
+        $this->assign('jinbin_scale',$sp_cfg );
+        $this->assign('tixian_order_total',$tixian_order_total );
+
         if( IS_POST ) {
-            $member_data = M('member')->field('price,bank_name,bank_user,bank_number')->find($this->member_id);
+            $member_data = M('member')->field('jinbin_point,price,bank_name,bank_user,bank_number')->find($this->member_id);
 
             if( empty($member_data['bank_name']) || empty($member_data['bank_user']) || empty($member_data['bank_number']) ) {
                 $this->error('请先完善您的银行卡信息');
             }
 
-            $member_price = $member_data['price'];
-            $price = floatval(I('post.price'));
-            if( !($price >= 10) ) {
-                $this->error('提现金额不能少于10');
+            $member_price = $member_data['jinbin_point'];
+            $price = intval(I('post.price'));
+            $min_jinbin =   sp_cfg('min_jinbin');
+            $max_tixian_order =   sp_cfg('max_tixian_order');
+
+            if( !($price >= $min_jinbin) ) {
+                $this->error('提现圈币不能少于'.$min_jinbin);
             }
+
+            if( $tixian_order_total > $max_tixian_order ) {
+                $this->error('您还有未审核的提现，请耐心等待');
+            }
+
             if( !($member_price > 0) ) {
                 $this->error('没有可提现的余额');
             }
             if( $price > $member_price ) {
                 $this->error('余额不足');
             }
-            if( $price%10 != 0 ) {
+            if( $price%$sp_cfg != 0 ) {
                 $this->error('提现金额必须为10的倍数');
             }
 
+            //真实的提现额
+            $virual_price   =   $price/$sp_cfg;
+
+
+
             $data = array();
             $data['member_id'] = $this->member_id;
-            $data['price'] = $price;
+            $data['price'] = $virual_price;
+            $data['jinbin'] = $price;
             $data['create_time'] = time();
             $data['status'] = 0;
             $data['charge'] = sp_cfg('charge');
-            $data['actual_price'] = $price - $price*sp_cfg('charge')/100;
+            $data['actual_price'] = $virual_price - $virual_price*sp_cfg('charge')/100;
+
+
             $result = M('member_tixian')->add($data);
             if( $result ) {
                 $model = new MemberModel();
-                $res = $model->decPrice($this->member_id, $price, 100, '申请提现');
+                $res = $model->decjinbin($this->member_id, $price, 100, '申请提现');
                 if( $res ) {
-                    $this->success('提交申请成功，等待管理员审核', U('index'));
+                   $this->success('提交申请成功，等待管理员审核', U('index'));
                 } else {
                     $this->error('提交失败');
                 }
@@ -424,6 +453,7 @@ class MemberController extends HomeBaseController{
             $data = M('member')->find($this->member_id);
             $data['bank_number_last'] = substr($data['bank_number'],-4);
             $this->assign('data', $data);
+
             $this->display();
         }
     }

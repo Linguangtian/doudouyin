@@ -78,6 +78,7 @@
         <th>姓名</th>
         <th>电话</th>
         <th>提现账户</th>
+        <th>提现圈币</th>
         <th>提现金额</th>
         <th>手续费</th>
         <th>实际提现金额</th>
@@ -94,6 +95,7 @@
                 <p>开户人姓名：<?php echo ($vo["bank_user"]); ?></p>
                 <p>银行卡号：<?php echo ($vo["bank_number"]); ?></p>
             </td>
+            <td><?php echo ($vo["jinbin"]); ?></td>
             <td>￥<?php echo ($vo["price"]); ?></td>
             <td><?php echo ($vo["charge"]); ?>%</td>
             <td>￥<?php echo ($vo["actual_price"]); ?></td>

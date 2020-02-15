@@ -149,6 +149,36 @@ class MemberModel extends BaseModel
         return $res;
     }
 
+    public function incjinbi($member_id, $jinbin,$price, $type=0, $remark = '', $no='')
+    {
+        if( !($jinbin>0) ) {
+            return false;
+        }
+        $res = M('member')->where(array('id' => $member_id))->setInc('jinbin_total', $jinbin);
+        $jinbin_data=[
+            'member_id' => $member_id,
+            'c_jinbin'  =>$jinbin,
+            'c_type'    =>9,
+            'type'      =>1,
+            'create_time'=>date('Y-m-d H:i:s',time()),
+            'dsc' => $remark,
+
+        ];
+         M('member_jinbin_log')->add($jinbin_data);
+
+        if ($res) {
+
+            //更新总收入 当提现失败返回余额时不加进累计收入
+            if( $type != 99 ) {
+                M('member')->where(array('id' => $member_id))->setInc('total_price', $price);
+            }
+
+            //添加日志
+            $this->price_log($member_id, $price, $type, $remark, $no);
+        }
+        return $res;
+    }
+
 
 
 
@@ -169,22 +199,23 @@ class MemberModel extends BaseModel
             return false;
         }
 
-
         $jinbin_point = M('member')->where(['id' => $member_id])->getField('jinbin_point');
-        if(!$jinbin_point){
+        $total_jinbin = M('member')->where(['id' => $member_id])->getField('total_jinbin');
+
+
+        if(!$jinbin_point||$jinbin_point==null){
 
             M('member')->where(['id' => $member_id])->save(['jinbin_point' =>$jinbin]);
 
         }else{
-
-
             $res = M('member')->where(array('id' => $member_id))->setInc('jinbin_point', $jinbin);
-
-
-
         }
 
-
+        if(!$total_jinbin||$total_jinbin==null){
+            M('member')->where(['id' => $member_id])->save(['total_jinbin' =>$jinbin]);
+        }else{
+            M('member')->where(array('id' => $member_id))->setInc('total_jinbin', $jinbin);
+        }
 
         return $res;
     }
@@ -214,6 +245,30 @@ class MemberModel extends BaseModel
         return $res;
     }
 
+    public function decjinbin($member_id, $price, $c_type=2, $remark = '提现')
+    {
+
+        $res = M('member')->where(array('id' => $member_id))->setDec('jinbin_point', $price);
+
+        $type = $c_type>10?2:1;
+        if( $res ) {
+            $jinbin_data=[
+                'member_id' => $member_id,
+                'c_jinbin'  => $price,
+                'c_type'    => $c_type,
+                'type'      => $type,
+                'create_time'=>date('Y-m-d H:i:s',time()),
+                'dsc' =>$remark,
+
+            ];
+             M('member_jinbin_log')->add($jinbin_data);
+
+        }
+        return $res;
+    }
+
+
+
     /**
      * 提现审核
      */
@@ -221,11 +276,12 @@ class MemberModel extends BaseModel
     {
         $data = M('member_tixian')->find($tixian_id);
         $price = $data['price'];
+        $jinbin = $data['jinbin'];
 
         if( $tixian_status == -1 ) {
             //审核不通过 将钱返回余额
             if( $price > 0 ) {
-                $this->incPrice($data['member_id'], $price, 99, '提现失败，金额返回余额');
+                $this->incjinbi($data['member_id'],$jinbin ,$price, 99, '提现失败，退还');
                 return true;
             }
         } elseif( $tixian_status == 1 ) {

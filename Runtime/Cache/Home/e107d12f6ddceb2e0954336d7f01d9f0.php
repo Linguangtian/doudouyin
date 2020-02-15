@@ -164,12 +164,12 @@
 		<div class="user_index_top_t">
 			<img src="<?php echo ($sys_config["web_logo"]); ?>"/>
 			<p class="user_index_top_s"><?php echo ($data["username"]); ?></p>
-			<p class="user_index_top_x">ID:<?php echo ($member["id"]); ?> <?php echo ($data["nickname"]); ?> <?php if($data['level'] > 0): ?><span><?php echo ($level_name); ?></span><?php endif; ?></p>
+			<p class="user_index_top_x">ID:<?php echo ($member["id"]); ?> <?php echo ($data["nickname"]); ?> <span><?php echo ($level_name); ?></span></p>
 		</div>
 
 		<div class="usermes wrap-flex-row">
 			<div class="mesBox">
-				<div class="text">0</div>
+				<div class="text"><?php echo ($data["total_jinbin"]); if($data["total_jinbin"] == null): ?>0<?php endif; ?></div>
 				<div class="num">累计收益</div>
 			</div>
 			<span class="u-data-g">|</span>

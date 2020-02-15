@@ -13,6 +13,7 @@ class IndexController extends AdminBaseController{
 	public function index(){
 		// 分配菜单数据
 		$nav_data=D('AdminNav')->getTreeData('level','order_number,id');
+
 		$assign=array(
 			'data'=>$nav_data
 			);

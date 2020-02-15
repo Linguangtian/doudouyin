@@ -112,12 +112,12 @@
 		<div class="user_index_top_t">
 			<img src="{$sys_config.web_logo}"/>
 			<p class="user_index_top_s">{$data.username}</p>
-			<p class="user_index_top_x">ID:{$member.id} {$data.nickname} <if condition="$data['level'] gt 0"><span>{$level_name}</span></if></p>
+			<p class="user_index_top_x">ID:{$member.id} {$data.nickname} <span>{$level_name}</span></p>
 		</div>
 
 		<div class="usermes wrap-flex-row">
 			<div class="mesBox">
-				<div class="text">0</div>
+				<div class="text">{$data.total_jinbin}<if condition="$data.total_jinbin eq null">0</if></div>
 				<div class="num">累计收益</div>
 			</div>
 			<span class="u-data-g">|</span>

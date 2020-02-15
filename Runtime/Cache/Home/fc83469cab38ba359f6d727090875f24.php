@@ -81,12 +81,15 @@
                     </div><?php endif; ?>
 
                 <div class="con">
-                    <div class="t">提现金额</div>
+                    <div class="t">提现圈币</div>
                     <div class="p">
-                        <input type="text" name="price" value="" placeholder="">
+                        <input type="text" name="price" id="price" value="" oninput ="update_jinbi()" placeholder="">
                     </div>
-                    <div class="info">可用余额 <?php echo ($data["price"]); ?>元 </div>
+                    <div class="info">帐号圈币：<span style="color: #09b245"><?php echo ($data["jinbin_point"]); ?></span> 圈币   兑换比例 <?php echo ($jinbin_scale); ?>圈币=1元</div>
                 </div>
+
+                <div class="con"  style="color: red"><div class="money" style="display: none">提现金额: <span id="money">0</span> 元</div></div>
+
 
                 <div class="b">
                     <button class="btn_type btn_tx">确定</button>
@@ -96,4 +99,18 @@
     </div>
 </div>
 </body>
+<script type="text/javascript">
+   function update_jinbi() {
+       var scale    = "<?php echo ($jinbin_scale); ?>";
+       var jinbin   = $("#price").val();
+       var money    = parseInt(jinbin/scale)
+        $(".money").show();
+        $("#money").html(money);
+
+
+
+   }
+
+
+</script>
 </html>

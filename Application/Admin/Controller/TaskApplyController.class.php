@@ -61,9 +61,6 @@ class TaskApplyController extends AdminBaseController{
     public function handle() {
         if( IS_POST ) {
             $id = I('post.id');
-            $this->add_task_jinbin($id);
-            exit;
-
 
             $old_status = M('task_apply')->where(array('id'=>$id))->getField('status');
             if( $old_status == 2 ) {
@@ -230,10 +227,10 @@ class TaskApplyController extends AdminBaseController{
                     $price_3 = sprintf("%.2f", $price_3);
                     if( $open_level_rule==1 ) {
                         if( $p3_level>=$member_data['level']  ) {
-                            $this->add_sale($id, $price_3, $member_data['p3'], 2, '三级提成，来源用户'.$member_data['username'], $member_data['id'] );
+                            $this->add_sale($id, $price_3, $member_data['p3'], 2, '【完成任务】三级提成，来源用户'.$member_data['username'], $member_data['id'] );
                         }
                     } else {
-                        $this->add_sale($id, $price_3, $member_data['p3'], 2, '三级提成，来源用户'.$member_data['username'], $member_data['id'] );
+                        $this->add_sale($id, $price_3, $member_data['p3'], 2, '【完成任务】三级提成，来源用户'.$member_data['username'], $member_data['id'] );
                     }
                 }
             }
@@ -281,7 +278,7 @@ class TaskApplyController extends AdminBaseController{
 
         //是否开启等级高低返佣规则
         $open_level_rule = intval(sp_cfg('open_level_rule'));
-
+        $open_level_rule = 0;
         //给直接上级返利
         if( $member_data['p1']>0 ) {
             $bfb_1 = floatval(sp_cfg('bfb_1'));
@@ -360,7 +357,6 @@ class TaskApplyController extends AdminBaseController{
             //添加金额变动记录
             $model_member = new MemberModel();
             $model_member->incJinbin($member_id,$c_jinbin,$c_type);
-        } else {
 
         }
     }

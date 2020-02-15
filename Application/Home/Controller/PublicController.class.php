@@ -6,7 +6,7 @@ use Common\Controller\PublicBaseController;
 use Common\Model\PhonecodeModel;
 use Common\Model\SmsModel;
 use Org\Net\Jssdk;
-
+use Common\Model\MemberModel;
 class PublicController extends PublicBaseController
 {
 
@@ -346,8 +346,13 @@ class PublicController extends PublicBaseController
                     'dsc' => '注册赠送'.$jinbin.'币',
 
                 ];
-                M('member_jinbin_log')->add($jinbin_data);
+                $member_jinbin_log  =  M('member_jinbin_log')->add($jinbin_data);
+                if( $member_jinbin_log ) {
+                    //添加金额变动记录
+                    $model_member = new MemberModel();
+                    $model_member->incJinbin($id,$jinbin);
 
+                }
 
                 // xiao5    2019年7月8日18:23:26   加推荐关系表
                 if (!empty($invite_code)) {

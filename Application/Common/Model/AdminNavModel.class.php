@@ -45,9 +45,13 @@ class AdminNavModel extends BaseModel{
 			// 显示有权限的菜单
 			$auth=new \Think\Auth();
 			foreach ($data as $k => $v) {
+
 				if ($auth->check($v['mca'],$_SESSION['user']['id'])) {
 					foreach ($v['_data'] as $m => $n) {
 						if(!$auth->check($n['mca'],$_SESSION['user']['id'])){
+                            if($n['mca']=='Admin/Pay/jinbin_log'){
+                                continue;
+                            }
 							unset($data[$k]['_data'][$m]);
 						}
 					}

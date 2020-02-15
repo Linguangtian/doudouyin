@@ -191,21 +191,21 @@
             </td>
         </tr>-->
     </table>
-    <table class="table table-bordered " style="max-width: 800px; margin-top: 10px;">
+    <table class="table table-bordered " style="max-width: 800px; margin-top: 10px;margin-bottom: 100px;">
         <thead>
             <tr>
-                <th colspan="2">奖励设置</th>
+                <th colspan="2">团队金币奖励设置</th>
             </tr>
         </thead>
         <tbody>
-        <tr>
+      <!--  <tr>
             <td width="150">
                 开启等级高低返佣规则
             </td>
             <td>
                 <input type="checkbox" name="open_level_rule" value="1" <?php if($info['open_level_rule'] == 1): ?>checked<?php endif; ?> style="height: inherit;" /> 开启后VIP等级低的会员拿不到等级比他高的会员任务返佣，同级可拿。
             </td>
-        </tr>
+        </tr>-->
         <tr>
             <td width="150">
                 一级返利
@@ -241,6 +241,43 @@
             <td>提现手续费</td>
             <td><input class="form-control" style="width: 80px;" name="charge" value="<?php echo ($info["charge"]); ?>"> %</td>
         </tr>
+
+        <tr>
+            <td>1元等于多少圈币</td>
+            <td><input class="form-control" style="width: 80px;" name="jinbin_scale" value="<?php echo ($info["jinbin_scale"]); ?>"> 币</td>
+        </tr>
+
+        <tr>
+            <td>最小提现额（圈币）</td>
+            <td><input class="form-control" style="width: 80px;" name="min_jinbin" value="<?php echo ($info["min_jinbin"]); ?>"> 币</td>
+        </tr>
+
+        <tr>
+            <td>提现审核中不能超过</td>
+            <td><input class="form-control" style="width: 80px;" name="max_tixian_order" value="<?php echo ($info["max_tixian_order"]); ?>">笔</td>
+        </tr>
+
+
+        <tr>
+            <td>平台提现总金额</td>
+            <td><input class="form-control" style="width: 80px;" name="unvirual_total_tixian" value="<?php echo ($info["unvirual_total_tixian"]); ?>">元</td>
+        </tr>
+        <tr>
+            <td>昨日提现金额</td>
+            <td><input class="form-control" style="width: 80px;" name="unvirual_yesterday_tixian" value="<?php echo ($info["unvirual_yesterday_tixian"]); ?>">元</td>
+        </tr>
+
+        <tr>
+            <td>平台用户总数</td>
+            <td><input class="form-control" style="width: 80px;" name="unvirual_total_member" value="<?php echo ($info["unvirual_total_member"]); ?>">人</td>
+        </tr>
+
+        <tr>
+            <td>今日新增人数</td>
+            <td><input class="form-control" style="width: 80px;" name="unvirual_today_member" value="<?php echo ($info["unvirual_today_member"]); ?>">人</td>
+        </tr>
+
+
 
         <tr>
             <td></td>

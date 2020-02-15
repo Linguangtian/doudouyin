@@ -5,6 +5,34 @@ use Org\Net\Mobile;
 use Common\Model\LevelModel;
 use Common\Model\SystemConfigModel;
 
+function virual(){
+
+    $map                =   [];
+    $now_day            =   strtotime( date( 'Y-m-d ',time() ) );
+    $map['create_time'] =   ['gt',$now_day];
+    $today_member       =   M('member')->where($map)->count();
+
+    $total_member       =   M('member')->count();
+    $tixian_price       =   M('member')->sum('tixian_price');
+
+    $beginYesterday=mktime(0,0,0,date('m'),date('d')-1,date('Y'));
+    $endYesterday=mktime(0,0,0,date('m'),date('d'),date('Y'))-1;
+
+
+    $map2['_string'] = " create_time > ".$beginYesterday .' and create_time<'.$endYesterday.' and status in(0,1) ';
+    $yesterday_tixian_price       =   M('member_tixian')->where($map2)->sum('price');
+
+    $info['today_member']       =     sp_cfg('unvirual_today_member') + $today_member;
+    $info['total_member']       =     sp_cfg('unvirual_total_member') + $total_member;
+    $info['total_tixian']       =     sp_cfg('unvirual_total_tixian') + $tixian_price;
+    $info['yesterday_tixian']   =     sp_cfg('unvirual_yesterday_tixian') + $yesterday_tixian_price;
+
+
+
+    return $info;
+}
+
+
 class IndexController extends HomeBaseController{
 
     public function index()
@@ -13,6 +41,7 @@ class IndexController extends HomeBaseController{
             $start = $_REQUEST['start'];
             $map = array();
             $map['status'] = 1;
+            $map['level']  = 0;
             $task_list = M('task')->field('jinbin,id,cid,title,level,price,create_time,max_num,apply_num,max_num-apply_num as leftnum, tasklb')->where($map)->order('id desc')->limit($start,10)->select();
             $level_list = LevelModel::get_member_level();
 
@@ -79,6 +108,7 @@ class IndexController extends HomeBaseController{
 
         $map = array();
         $map['status'] = 1;
+        $map['level']  = 0;
         $task_list = M('task')->field('jinbin,id,cid,title,level,price,create_time,max_num,apply_num,max_num-apply_num as leftnum, tasklb')->where($map)->order('id desc')->limit(10)->select();
 
 
@@ -130,6 +160,9 @@ class IndexController extends HomeBaseController{
         $title = sp_cfg('website');
         $this->assign('title', $title);
 
+
+
+        $this->assign('virual', virual());
         $this->display();
     }
 
@@ -178,6 +211,7 @@ class IndexController extends HomeBaseController{
             $start = $_REQUEST['start'];
 
             $map['status'] = 1;
+
             $map['title']=array('like',"%$key%");
             $cid ? $map['cid'] = $cid : '';
             $task_list = M('task')->where($map)->order('id desc')->limit($start,10)->select();

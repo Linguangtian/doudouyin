@@ -73,9 +73,9 @@
         <tr>
             <th>悬赏喵币</th>
             <td>
-                <?php if($info['id'] > 0): ?><input class="col-xs-12 col-sm-5" type="text" name="jinbin" value="<?php echo ($info["jinbin"]); ?>" style="width: 100px;">喵币
+                <?php if($info['id'] > 0): ?><input class="col-xs-12 col-sm-5" type="text" name="jinbin" value="<?php echo ($info["jinbin"]); ?>" style="width: 100px;">圈币
                     <?php else: ?>
-                    <input class="col-xs-12 col-sm-5" type="text" name="jinbin" value="1" style="width: 100px;">喵币<?php endif; ?>
+                    <input class="col-xs-12 col-sm-5" type="text" name="jinbin" value="1" style="width: 100px;">圈币<?php endif; ?>
 
             </td>
 
