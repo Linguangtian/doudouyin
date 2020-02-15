@@ -61,7 +61,8 @@ class TaskApplyController extends AdminBaseController{
     public function handle() {
         if( IS_POST ) {
             $id = I('post.id');
-
+            $this->add_task_jinbin($id);
+            exit;
 
 
             $old_status = M('task_apply')->where(array('id'=>$id))->getField('status');

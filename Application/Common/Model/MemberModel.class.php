@@ -164,19 +164,28 @@ class MemberModel extends BaseModel
      */
     public function incJinbin($member_id, $jinbin, $type=0)
     {
+
         if( !($jinbin>0) ) {
             return false;
         }
-        $res = M('member')->where(array('id' => $member_id))->setInc('jinbin_point', $jinbin);
 
-        if ($res) {
 
-            //更新总收入 当提现失败返回余额时不加进累计收入
-            if( $type != 99 ) {
-                M('member')->where(array('id' => $member_id))->setInc('total_jinbin', $jinbin);
-            }
+        $jinbin_point = M('member')->where(['id' => $member_id])->getField('jinbin_point');
+        if(!$jinbin_point){
+
+            M('member')->where(['id' => $member_id])->save(['jinbin_point' =>$jinbin]);
+
+        }else{
+
+
+            $res = M('member')->where(array('id' => $member_id))->setInc('jinbin_point', $jinbin);
+
+
 
         }
+
+
+
         return $res;
     }
 

@@ -438,7 +438,7 @@
 						</div>
 
 						<p class="index_qqq">
-							<?php echo ($vo["jinbin"]); ?>喵币
+							<?php echo ($vo["jinbin"]); ?>圈币
 							<span></span>
 						</p>
 					</div>

@@ -174,8 +174,8 @@
 			</div>
 			<span class="u-data-g">|</span>
 			<div class="mesBox" onclick="window.open('/index.php/Home/Member/jinbin_log.html','_self')">
-				<div class="text" ><?php echo ($data["jinbin_point"]); ?></div>
-				<div class="num">喵币余额</div>
+				<div class="text" ><?php echo ($data["jinbin_point"]); if($data["jinbin_point"] == null): ?>0<?php endif; ?></div>
+				<div class="num">圈币余额</div>
 			</div>
 			<span class="u-data-g">|</span>
 			<div class="mesBox goto">
