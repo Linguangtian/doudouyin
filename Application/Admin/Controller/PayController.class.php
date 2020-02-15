@@ -348,7 +348,10 @@ class PayController extends AdminBaseController{
             $data['status'] = $status;
             $data['admin_remark'] = I('post.admin_remark');
             $data['update_time'] = time();
+
             $result = M('member_tixian')->save($data);
+       
+
             if( $result ) {
 
                 //如果什么都不修改算修改失败，所以更新时间最后更新

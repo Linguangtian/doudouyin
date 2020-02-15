@@ -154,7 +154,9 @@ class MemberModel extends BaseModel
         if( !($jinbin>0) ) {
             return false;
         }
-        $res = M('member')->where(array('id' => $member_id))->setInc('jinbin_total', $jinbin);
+        $map=['id'=>$member_id];
+        $res = M('member')->where($map)->setInc('jinbin_point', intval($jinbin));
+
         $jinbin_data=[
             'member_id' => $member_id,
             'c_jinbin'  =>$jinbin,
@@ -281,7 +283,9 @@ class MemberModel extends BaseModel
         if( $tixian_status == -1 ) {
             //审核不通过 将钱返回余额
             if( $price > 0 ) {
+
                 $this->incjinbi($data['member_id'],$jinbin ,$price, 99, '提现失败，退还');
+
                 return true;
             }
         } elseif( $tixian_status == 1 ) {

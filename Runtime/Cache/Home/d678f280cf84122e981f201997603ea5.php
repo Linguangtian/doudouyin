@@ -500,18 +500,14 @@
 							<span>今日<span>新增用户</span>数<?php echo ($virual["today_member"]); ?>人</span>
 							<p style="margin-top: 10px;">平台用户总数<i class="fa fa-arrow-down"></i><?php echo ($virual["total_member"]); ?>人</p>
 						</div>
-						<!-- <div class="col s4">
-                        <img src="/Public/statics/images/2.xhs.png" alt="">
-                    </div> -->
+
 					</div>
 					<div class="col s6 chart-child">
 						<div class="col s8 " style="margin-top:6%">
 							<span>昨日<span>体现金额</span><?php echo ($virual["yesterday_tixian"]); ?>元</span>
 							<p style="margin-top: 10px;">平台提现总金额<i class="fa fa-arrow-down"></i><?php echo ($virual["total_tixian"]); ?>元</p>
 						</div>
-						<!-- <div class="col s4">
-                        <img src="/Public/statics/images/2.xhs.png" alt="">
-                    </div> -->
+
 					</div>
 
 
