@@ -585,10 +585,10 @@ class MemberController extends HomeBaseController{
             $insert_id = M('recharge')->add($data);
             if( $insert_id ) {
                 //在线支付 个人免签
-                $this->redirect('Api/Paysapi/pay',array('order_no'=>$order_no,'payment_type'=>$payment_type));
+               // $this->redirect('Api/Paysapi/pay',array('order_no'=>$order_no,'payment_type'=>$payment_type));
                 #$this->redirect('Api/Yipay/pay',array('order_no'=>$order_no,'payment_type'=>$payment_type));
                 //线下扫码转账
-                //$this->success('提交成功，前往支付',U('pay',array('out_trade_no'=>$order_no)));
+              $this->success('提交成功，前往支付',U('pay',array('out_trade_no'=>$order_no)));
             }
         } else {
             $member = $this->get_member_data();

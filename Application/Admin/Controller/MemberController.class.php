@@ -110,6 +110,7 @@ class MemberController extends AdminBaseController{
         $data['is_pay'] = 0;
         $data['level'] = $level;
         $insert_id = M('recharge')->add($data);
+
         if( $insert_id ) {
             $pay_model = new PayModel();
             $pay_model->pay_vip_success($insert_id,'admin',session('user.username').date('YmdHis'));

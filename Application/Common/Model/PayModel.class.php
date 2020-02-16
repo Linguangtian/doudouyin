@@ -41,7 +41,7 @@ class PayModel extends BaseModel{
 
         //用户基本信息
         $member_data = M('member')->field('id,username,phone,p1,p2,p3,level')->where(array('id'=>$recharge['member_id']))->find();
-        if( $member_data['level'] > 0 ) {
+        if( !$member_data['level'] > 0 ) {
             //如果用户已经升过级，不再给返利 只升级会员 直接返回
 
             M('recharge')->where(array('id'=>$recharge['id']))->setField('is_pay',1);
@@ -56,18 +56,19 @@ class PayModel extends BaseModel{
 
         //更新为已支付
         M('recharge')->where(array('id'=>$recharge['id']))->setField('is_pay',1);
-//        $rebate_price_1 = $member_level[$recharge['level']]['rebate_price_1']; //一级提成
-//        $rebate_price_2 = $member_level[$recharge['level']]['rebate_price_2']; //二级提成
-//        $rebate_price_3 = $member_level[$recharge['level']]['rebate_price_3']; //三级提成
+           $rebate_price_1 = $member_level[$recharge['level']]['rebate_price_1']  * sp_cfg('jinbin_scale'); //一级提成
+           $rebate_price_2 = $member_level[$recharge['level']]['rebate_price_2']  * sp_cfg('jinbin_scale'); //二级提成
+           $rebate_price_3 = $member_level[$recharge['level']]['rebate_price_3']  * sp_cfg('jinbin_scale'); //三级提成
 
-        $p1_level = M('member')->where(['id' => $member_data['p1']])->getField('level');
+     /*   $p1_level = M('member')->where(['id' => $member_data['p1']])->getField('level');
+
         $rebate_price_1 = $member_level[$p1_level]['rebate_price_1'];
 
         $p2_level = M('member')->where(['id' => $member_data['p2']])->getField('level');
         $rebate_price_2 = $member_level[$p2_level]['rebate_price_2'];
 
         $p3_level = M('member')->where(['id' => $member_data['p3']])->getField('level');
-        $rebate_price_3 = $member_level[$p3_level]['rebate_price_3'];
+        $rebate_price_3 = $member_level[$p3_level]['rebate_price_3'];*/
 
         //升级用户为会员
         M('member')->where(array('id'=>$recharge['member_id']))->setField('level', $recharge['level']);
@@ -76,27 +77,34 @@ class PayModel extends BaseModel{
         M('member_guanxi')->where(array('member_id'=>$recharge['member_id']))->save(['level' => $recharge['level']]);
         M('member_guanxi')->where(array('p_id'=>$recharge['member_id']))->save(['p_level' => $recharge['level']]);
 
+
+
+
         //给直接上级返利
         if( $member_data['p1']>0 ) {
             if( $rebate_price_1>0 ) {
-                $this->add_sale($order_id, $rebate_price_1, $member_data['p1'], 3, '推荐会员提成，来源用户'.$member_data['username'], $member_data['id'] );
+                //$this->add_sale($order_id, $rebate_price_1, $member_data['p1'], 3, '推荐会员提成，来源用户'.$member_data['username'], $member_data['id'] );
+
+                $this->add_jinbin($member_data['p1'], $rebate_price_1 , 1, 3,'推荐会员提成，来源用户'.$member_data['username'], $order_id,$member_data['id'] ,$member_data['username']);
             }
         }
-        //二级返利
+     //二级返利
         if( $member_data['p2']>0 ) {
             if( $rebate_price_2>0 ) {
-                $this->add_sale($order_id, $rebate_price_2, $member_data['p2'], 3, '推荐会员提成，来源用户'.$member_data['username'], $member_data['id'] );
+
+                $this->add_jinbin($member_data['p2'], $rebate_price_2 , 1, 3,'推荐会员提成，来源用户'.$member_data['username'], $order_id,$member_data['id'] ,$member_data['username']);
             }
         }
         //三级返利
         if( $member_data['p3']>0 ) {
             if( $rebate_price_3>0 ) {
-                $this->add_sale($order_id, $rebate_price_3, $member_data['p3'], 3, '推荐会员提成，来源用户'.$member_data['username'], $member_data['id'] );
+
+                $this->add_jinbin($member_data['p3'], $rebate_price_3 , 1, 3,'推荐会员提成，来源用户'.$member_data['username'], $order_id,$member_data['id'] ,$member_data['username']);
             }
         }
 
         // xiao5    2019年7月9日09:06:07   四级及以上返利
-        $p_users = M('member_guanxi')->where(['member_id' => $recharge['member_id'], ['dai' => ['egt', 4], 'p_level' => ['in', '2,3']]])->group('p_level')->order('dai asc')->select();
+       /* $p_users = M('member_guanxi')->where(['member_id' => $recharge['member_id'], ['dai' => ['egt', 4], 'p_level' => ['in', '2,3']]])->group('p_level')->order('dai asc')->select();
         if ($p_users) {
             if (count($p_users) == 1 || $p_users[0]['p_level'] > $p_users[1]['p_level']) {
                 $rebate_price_4 = $member_level[$p_users[0]['p_level']]['rebate_price_4'];
@@ -112,7 +120,7 @@ class PayModel extends BaseModel{
                     $this->add_sale($order_id, $rebate_price_4, $p_user['p_id'], 3, '推荐会员提成，来源用户'.$member_data['username'], $member_data['id'] );
                 }
             }
-        }
+        }*/
 
         //信息提示
         $noticeModel = new NoticeModel();
@@ -148,4 +156,28 @@ class PayModel extends BaseModel{
             throw_exception('添加收益失败');
         }
     }
+
+
+    private function add_jinbin($member_id,$c_jinbin,$type,$c_type,$dsc,$order_id=0,$from_member_id=0,$from_member_name='')
+    {
+        //添加直销收入记录
+        $data['member_id'] = $member_id;
+        $data['from_member_id'] = $from_member_id;
+        $data['order_id'] = $order_id;
+        $data['c_jinbin'] = $c_jinbin;
+        $data['dsc'] = $dsc;
+        $data['create_time'] = date('Y-m-d H:i:s',time());
+        $data['type'] = $type;
+        $data['c_type'] = $c_type;
+
+        $result = M('member_jinbin_log')->add($data);
+        if( $result ) {
+            //添加金额变动记录
+            $model_member = new MemberModel();
+            $model_member->incJinbin($member_id,$c_jinbin,$c_type);
+
+        }
+    }
+
+
 }

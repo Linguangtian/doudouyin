@@ -350,7 +350,7 @@ class PayController extends AdminBaseController{
             $data['update_time'] = time();
 
             $result = M('member_tixian')->save($data);
-       
+
 
             if( $result ) {
 
